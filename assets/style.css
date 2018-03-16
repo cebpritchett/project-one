@@ -4,7 +4,7 @@
 3.  Text in Jumbotron needs to be center adjusted - WK
 4.  Background image saved is too large - Need to save smaller..maybe png instead of jpeg- WK
 5.  Need Responsive media tags - WK
-6.
+6. Color Ideas for Buttons and accents #ed4382,#eb6c62, #4db250
 */
 
 body {
@@ -25,10 +25,8 @@ body {
 #myDivPie{
     float:left;
     margin-left:100px;
-    -webkit-margin-top-collapse: collapse;
 }
 #myDiv{
     float: right;
     margin-right:100px;
-    -webkit-margin-top-collapse: initial;
 }
