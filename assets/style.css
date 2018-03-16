@@ -21,3 +21,14 @@ body {
     text-align: center;
     margin-top: -5%;
 }
+
+#myDivPie{
+    float:left;
+    margin-left:100px;
+    -webkit-margin-top-collapse: collapse;
+}
+#myDiv{
+    float: right;
+    margin-right:100px;
+    -webkit-margin-top-collapse: initial;
+}
