@@ -15,6 +15,7 @@
     <!--Linking Local CSS-->
         <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css" />
         <link rel="stylesheet" type="text/css" href="assets/style.css">   
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <!--Page Title-->
         <title>MEMOod Home</title>
@@ -48,41 +49,41 @@
         </ul>
     </header>
 
-    <!--Modal-->
-    <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Hello</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>How are you, today?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
+        <!--Modal-->
+        <div id="modal1">
+            <h1 class="modalHeader">
+                How are doing today?
+            </h1>
+            <br>
+            <div id="giphs">
+                <form class="giphSubmit">
+                    <div class="giphModal">
+                      <input type="firstInput" class="form-control" id="giphSubmit" placeholder="Represent your mood with a gif" style="width: 250px">
+                    </div>
+                </form>
             </div>
+            <br>
+            <button id="modalsubmit">Submit</button>
+                
+        <!--end of modal div-->
         </div>
-    </div>
+        <!-- giphResults div for posting daily giph -->
+        <div id="giph-results">Where is this at?</div>
 
     <div id='calendar'></div>
 
 
 
 
-    <!-- Optional JavaScript -->
-    <script src="assets/main.js"></script>
+   
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>   
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+         <!-- Optional JavaScript -->
+    <script src="assets/main.js"></script>
 </body>
 
 </html>
