@@ -8,7 +8,7 @@
     }
     ];
 
-    Plotly.newPlot("#myDivPie", data);
+    Plotly.newPlot("myDivPie", data);
 
     //Plotly Bubble Chart
     var trace1 = {
