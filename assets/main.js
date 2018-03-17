@@ -35,3 +35,28 @@ var horoscopeSign = "";
     };
 
     Plotly.newPlot("myDiv", data, layout);
+<<<<<<< HEAD
+=======
+
+
+    $(function() {
+        $('#calendar').fullCalendar({
+          defaultView: 'listWeek',
+      
+          // customize the button names,
+          // otherwise they'd all just say "list"
+          views: {
+            listDay: { buttonText: 'list day' },
+            listWeek: { buttonText: 'list week' },
+            listMonth: { buttonText: 'list month' }
+          },
+      
+          header: {
+            left: 'title',
+            center: '',
+            right: 'listDay,listWeek,listMonth'
+          },
+          events: 'https://fullcalendar.io/demo-events.json'
+        })
+      });
+>>>>>>> d55db80f67988cf942dede540016324eeda99960

@@ -19,7 +19,8 @@ body {
     background-color: #1D1941;
     color: #F8E3BC;
     text-align: center;
-    margin-top: -5%;
+    
+    padding: 25px;
 }
 
 #myDivPie{
@@ -30,3 +31,8 @@ body {
     float: right;
     margin-right:100px;
 }
+
+#calendar {
+    max-width: 900px;
+    margin: 40px auto;
+  }
