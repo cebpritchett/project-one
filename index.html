@@ -17,6 +17,9 @@
         <link rel="stylesheet" type="text/css" href="assets/style.css">   
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+    <!--Link to googlefonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
     <!--Page Title-->
         <title>MEMOod Home</title>
 
@@ -50,13 +53,20 @@
 
         <!--Modal-->
         <div id="modal1">
-            <h1 class="modalheader">
+            <div id="modalheader">
                 How are doing today?
-            </h1>
-            <br>
-            <div id="giphs">
-                PLACE GIPHS HERE
             </div>
+            <br>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="emotion-input"  placeholder="happy">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="jounal">Journal your thoughts here:</label>
+                    <textarea class="form-control" id="journal-input" rows="5" placeholder="Today I feel.."></textarea>
+                  </div>
+            </form>
             <br>
             <button id="modalsubmit">Submit</button>
                 

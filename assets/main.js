@@ -5,8 +5,11 @@ $(document).ready(function() {
       //on click hide the message and the
   $("#modalsubmit").click(function () {
 
-  $("#modal1").hide();
-
+    $("#modal1").hide();
+    var emotion = $("#emotion-input").val().trim();
+    var journal = $("#journal-input").val().trim();
+    console.log(emotion);
+    console.log(journal);
     //end of modal fadout function
     });
 
