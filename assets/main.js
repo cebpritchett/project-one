@@ -1,3 +1,18 @@
+$(document).ready(function() {
+  
+  //hide hider and popup_box
+  $("#modal1").show();
+      //on click hide the message and the
+  $("#modalsubmit").click(function () {
+
+  $("#modal1").hide();
+
+    //end of modal fadout function
+    });
+
+
+});
+
 //Stats Page
     //Plotly Pie Chart
     var data = [
@@ -30,6 +45,7 @@
     };
 
     Plotly.newPlot("myDiv", data, layout);
+    
 
 
     $(function() {
