@@ -17,6 +17,9 @@
         <link rel="stylesheet" type="text/css" href="assets/style.css">   
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+    <!--Link to googlefonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
     <!--Page Title-->
         <title>MEMOod Home</title>
 
@@ -26,6 +29,7 @@
 <body>
     <header>
         <!--Jumbotron Header-->
+        <h1> Delete Me </h1>
         <div class="jumbotron">
             <h1 class="display-4">MEMOod</h1>
             <br>
@@ -51,24 +55,29 @@
 
         <!--Modal-->
         <div id="modal1">
-            <h1 class="modalHeader">
+            <div id="modalHeader">
                 How are doing today?
-            </h1>
-            <br>
-            <div id="giphs">
-                <form class="giphSubmit">
-                    <div class="giphModal">
-                      <input type="firstInput" class="form-control" id="giphSubmit" placeholder="Represent your mood with a gif" style="width: 250px">
-                    </div>
-                </form>
             </div>
             <br>
+            <form class="gifSubmit">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="emotion-input"  placeholder="Represent you mood with a gif!">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="jounal">Journal your thoughts here:</label>
+                    <textarea class="form-control" id="journal-input" rows="5" placeholder="Today I feel.."></textarea>
+                  </div>
+            </form>
+            <br>
             <button id="modalsubmit">Submit</button>
+            
                 
         <!--end of modal div-->
         </div>
-        <!-- giphResults div for posting daily giph -->
-        <div id="giph-results">Where is this at?</div>
+        <!-- gifResults div for posting daily giph -->
+        <div id="gifs-appear-here"></div>
+       
 
     <div id='calendar'></div>
 

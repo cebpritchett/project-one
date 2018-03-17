@@ -16,24 +16,27 @@ $(document).ready(function () {
 
     //Form submit funtion for first modal
 
-    $(".giphSubmit").submit(function (event) {
+    $(".gifSubmit").submit(function (event) {
         event.preventDefault();
-        var moodInput = $("#giphSubmit").val().trim();
+        var moodInput = $("#emotion-input").val().trim();
         console.log(moodInput);
 
         var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + moodInput + "&api_key=H8YEjrprBP114UoKPFK4mv1xKW8sKR6o";
 
-        // working on ajax call for giphy api
+        // AJAX call to giphy API
         $.ajax({
             url: giphyURL,
             method: "GET"
         }).then(function (response) {
-
-            console.log(response);
             var results = response.data;
-            console.log(results);
-
-            $("#giph-results").html(response);
+            for (var i = 0; i < results.length; i++) {
+                var obj = results[i];
+                var gifDiv = $("<div class='gif-results'>");
+                var gifImage = $("<img>");
+                gifImage.attr("src", obj.images.fixed_height.url);
+                gifDiv.append(gifImage);
+                $("#gifs-appear-here").prepend(gifDiv);
+            }
         });
     });
 
