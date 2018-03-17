@@ -45,6 +45,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     background-color: #F8E3BC;
+    color: #1D1941;
 }
 #modalheader {
     font-family: 'Quicksand', sans-serif;
@@ -55,4 +56,16 @@ body {
     color: #F8E3BC;
     padding: 2%;
 }
+.nav-link {
+    color: #DE9B84;
+}
+form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+label {
+    padding-bottom: 1%;
 
+}
