@@ -16,14 +16,12 @@ $(document).ready(function () {
 
     //Form submit funtion for first modal
 
-    $(".gifSubmit").submit(function (event) {
++    $(".gifSubmit").submit(function (event) {
         event.preventDefault();
-        var moodInput = $("#emotion-input").val().trim();
-        console.log(moodInput);
-
++       var moodInput = $("#emotion-input").val().trim();
         var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + moodInput + "&api_key=H8YEjrprBP114UoKPFK4mv1xKW8sKR6o";
 
-        // AJAX call to giphy API
++        // AJAX call to giphy API
         $.ajax({
             url: giphyURL,
             method: "GET"
