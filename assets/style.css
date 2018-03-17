@@ -1,0 +1,32 @@
+/*Design Notes:
+1.  Need new font for header: Possibly Handwriting or Italic - WK
+2.  Added Style to backgroun to fit on page - WK
+3.  Text in Jumbotron needs to be center adjusted - WK
+4.  Background image saved is too large - Need to save smaller..maybe png instead of jpeg- WK
+5.  Need Responsive media tags - WK
+6. Color Ideas for Buttons and accents #ed4382,#eb6c62, #4db250
+*/
+
+body {
+    background: url("images/background.jpeg")no-repeat center center fixed;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+}
+
+.jumbotron {
+    background-color: #1D1941;
+    color: #F8E3BC;
+    text-align: center;
+    margin-top: -5%;
+}
+
+#myDivPie{
+    float:left;
+    margin-left:100px;
+}
+#myDiv{
+    float: right;
+    margin-right:100px;
+}
