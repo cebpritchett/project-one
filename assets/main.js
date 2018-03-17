@@ -12,26 +12,27 @@ $(document).ready(function () {
         //end of modal fadout function
     });
 
-  
-    
+
+
+    //Form submit funtion for first modal
 
     $(".giphSubmit").submit(function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
         var moodInput = $("#giphSubmit").val().trim();
         console.log(moodInput);
-        
-        var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + moodInput + "&api_key=H8YEjrprBP114UoKPFK4mv1xKW8sKR6o";
-      
 
+        var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + moodInput + "&api_key=H8YEjrprBP114UoKPFK4mv1xKW8sKR6o";
+
+        // working on ajax call for giphy api
         $.ajax({
             url: giphyURL,
             method: "GET"
-         }).then(function (response) {
+        }).then(function (response) {
 
             console.log(response);
             var results = response.data;
             console.log(results);
-            
+
             $("#giph-results").html(response);
         });
     });
