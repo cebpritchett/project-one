@@ -31,3 +31,8 @@ body {
     float: right;
     margin-right:100px;
 }
+
+#calendar {
+    max-width: 900px;
+    margin: 40px auto;
+  }
