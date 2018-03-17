@@ -15,6 +15,10 @@ body {
      background-size: cover;
 }
 
+.nav-link {
+    color: #4db250;
+}
+
 .jumbotron {
     background-color: #1D1941;
     color: #F8E3BC;

@@ -13,7 +13,7 @@ var horoscopeSign = "";
     }
     ];
 
-    Plotly.newPlot("myDivPie", data);
+    //Plotly.newPlot("myDivPie", data);
 
     //Plotly Bubble Chart
     var trace1 = {
@@ -34,9 +34,7 @@ var horoscopeSign = "";
     width: 480
     };
 
-    Plotly.newPlot("myDiv", data, layout);
-<<<<<<< HEAD
-=======
+    //Plotly.newPlot("myDiv", data, layout);
 
 
     $(function() {
@@ -59,4 +57,3 @@ var horoscopeSign = "";
           events: 'https://fullcalendar.io/demo-events.json'
         })
       });
->>>>>>> d55db80f67988cf942dede540016324eeda99960
