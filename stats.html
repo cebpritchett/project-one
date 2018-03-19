@@ -22,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
 
     <!--Page Title-->
-    <title>MEMOod Stats</title>
+    <title>Me Mood Stats</title>
 
 </head>
 
@@ -30,7 +30,7 @@
     <header>
         <!--Jumbotron Header-->
         <div class="jumbotron">
-            <h1 class="display-4">MEmood</h1>
+            <h1 class="display-4">Me Mood</h1>
             <br>
             <p class="lead">STATS PAGE</p>
             <br>
@@ -138,30 +138,13 @@
             Plotly.newPlot('myDivPie', data, layout);
         </script>
 
-    <!--Bubble Chart-->
-    <div id="myDiv" style="width: 480px; height: 400px;">
-        <!-- Plotly chart will be drawn inside this DIV -->
-    </div>
-        <script>
-                var trace1 = {
-                x: [1, 2, 3, 4],
-                y: [10, 11, 12, 13],
-                mode: 'markers',
-                marker: {
-                    size: [40, 60, 80, 100]
-                }
-                };
+    <!--Line Graph-->
 
-                var data = [trace1];
-
-                var layout = {
-                        height: 400,
-                        width: 500
-                };
-
-                Plotly.newPlot('myDiv', data, layout);
-        </script>
-
+    <div id="myDiv"></div>
+    <script>
+      /* JAVASCRIPT CODE GOES HERE */
+    </script>
+    
     <!--Modal-->    
     <div class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
