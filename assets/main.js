@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import 'fullcalendar';
 
-
 //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
 //var horoscopeSign = "";
 $(document).ready(function () {
@@ -15,8 +14,6 @@ $(document).ready(function () {
 
         //end of modal fadout function
     });
-
-
 
     //Form submit funtion for first modal
 
@@ -45,7 +42,6 @@ $(document).ready(function () {
 });
 
 //Stats Page
-<<<<<<< HEAD
 
 //*********************Begin Chart Input**********************
 
@@ -100,21 +96,6 @@ $(document).ready(function () {
         );
      //Plotly Line Chart Start
      
-//*********************End Chart Input***************************
-=======
-//Plotly Pie Chart
-var data = [{
-    values: [19, 26, 55],
-    labels: ["Residential", "Non-Residential", "Utility"],
-    type: "pie"
-}];
-
-<<<<<<< HEAD
-    // Plotly.newPlot("myDivPie", data);
-=======
-//Plotly.newPlot("myDivPie", data);
->>>>>>> 75488c6b40c46023a7bf2fcf5866469ead771221
-
 //Plotly Bubble Chart
 var trace1 = {
     x: [1, 2, 3, 4],
@@ -136,12 +117,8 @@ var layout = {
 
 //Plotly.newPlot("myDiv", data, layout);
   
+//*********************End Chart Input*************************** 
 
-
-
-<<<<<<< HEAD
-    // Plotly.newPlot("myDiv", data, layout);
-  
 // To-do List Main Page //
     $(document).ready(function(){
 
@@ -169,7 +146,6 @@ var layout = {
           
 
 
-=======
 // To-do List on Home Page //{
 
 
@@ -198,16 +174,13 @@ var layout = {
                                          });
           });
         });
-          
->>>>>>> 75488c6b40c46023a7bf2fcf5866469ead771221
+         
 
         // trigger events on calendar
         $('#calendar').fullCalendar({
             eventClick: function(calEvent, jsEvent, view) {
-<<<<<<< HEAD
-=======
                 console.log(calendar)
->>>>>>> 75488c6b40c46023a7bf2fcf5866469ead771221
+
           
               alert('Event: ' + calEvent.title);
               alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
@@ -270,4 +243,3 @@ var layout = {
             });
           
           });
->>>>>>> develop
