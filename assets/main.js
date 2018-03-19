@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import 'fullcalendar';
 
-
 //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
 //var horoscopeSign = "";
 $(document).ready(function () {
@@ -15,8 +14,6 @@ $(document).ready(function () {
 
         //end of modal fadout function
     });
-
-
 
     //Form submit funtion for first modal
 
@@ -45,19 +42,60 @@ $(document).ready(function () {
 });
 
 //Stats Page
-//Plotly Pie Chart
-var data = [{
-    values: [19, 26, 55],
-    labels: ["Residential", "Non-Residential", "Utility"],
-    type: "pie"
-}];
 
-<<<<<<< HEAD
-    // Plotly.newPlot("myDivPie", data);
-=======
-//Plotly.newPlot("myDivPie", data);
->>>>>>> 75488c6b40c46023a7bf2fcf5866469ead771221
+//*********************Begin Chart Input**********************
 
+    //Plotly Pie Chart Start
+        var data = [
+        {
+            values: [19, 26, 55],
+            labels: ["Residential", "Non-Residential", "Utility"],
+            type: "pie"
+        }
+        ];
+
+        Plotly.newPlot("myDivPie", data);
+    //Plotly Pie Chart End
+
+    //Plotly Line Chart Start
+        Plotly.d3.csv(
+          "https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
+          function(err, rows) {
+            function unpack(rows, key) {
+              return rows.map(function(row) {
+                return row[key];
+              });
+            }
+
+            var trace1 = {
+              type: "scatter",
+              mode: "lines",
+              name: "AAPL High",
+              x: unpack(rows, "Date"),
+              y: unpack(rows, "AAPL.High"),
+              line: { color: "#17BECF" }
+            };
+
+            var trace2 = {
+              type: "scatter",
+              mode: "lines",
+              name: "AAPL Low",
+              x: unpack(rows, "Date"),
+              y: unpack(rows, "AAPL.Low"),
+              line: { color: "#7F7F7F" }
+            };
+
+            var data = [trace1, trace2];
+
+            var layout = {
+              title: "Basic Time Series"
+            };
+
+            Plotly.newPlot("myDiv", data, layout);
+          }
+        );
+     //Plotly Line Chart Start
+     
 //Plotly Bubble Chart
 var trace1 = {
     x: [1, 2, 3, 4],
@@ -79,12 +117,8 @@ var layout = {
 
 //Plotly.newPlot("myDiv", data, layout);
   
+//*********************End Chart Input*************************** 
 
-
-
-<<<<<<< HEAD
-    // Plotly.newPlot("myDiv", data, layout);
-  
 // To-do List Main Page //
     $(document).ready(function(){
 
@@ -112,7 +146,6 @@ var layout = {
           
 
 
-=======
 // To-do List on Home Page //{
 
 
@@ -141,16 +174,13 @@ var layout = {
                                          });
           });
         });
-          
->>>>>>> 75488c6b40c46023a7bf2fcf5866469ead771221
+         
 
         // trigger events on calendar
         $('#calendar').fullCalendar({
             eventClick: function(calEvent, jsEvent, view) {
-<<<<<<< HEAD
-=======
                 console.log(calendar)
->>>>>>> 75488c6b40c46023a7bf2fcf5866469ead771221
+
           
               alert('Event: ' + calEvent.title);
               alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);

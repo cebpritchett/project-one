@@ -1,6 +1,6 @@
 /*Design Notes:
 1.  Need new font for header: Possibly Handwriting or Italic - WK
-2.  Added Style to backgroun to fit on page - WK
+2.  Added Style to background to fit on page - WK
 3.  Text in Jumbotron needs to be center adjusted - WK
 4.  Background image saved is too large - Need to save smaller..maybe png instead of jpeg- WK
 5.  Need Responsive media tags - WK
@@ -24,13 +24,48 @@ body {
 }
 
 #myDivPie{
-    float:left;
-    margin-left:100px;
+  margin-left:auto;
+  margin-right: auto;
+  margin-left:100px;
 }
-#myDiv{
-    float: right;
-    margin-right:100px;
+
+#calendar {
+    max-width: 900px;
+    margin: 40px auto;
 }
+#modal1 {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F8E3BC;
+    color: #1D1941;
+}
+#modalheader {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+}
+#modalsubmit {
+    background-color: #1D1941;
+    color: #F8E3BC;
+    padding: 2%;
+}
+.nav-link {
+    color: #DE9B84;
+}
+form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+label {
+    padding-bottom: 1%;
+
+}
+
 
 #calendar {
     max-width: 900px;
