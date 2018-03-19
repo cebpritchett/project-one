@@ -46,6 +46,7 @@ $(document).ready(function () {
 
 //Stats Page
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 //*********************Begin Chart Input**********************
 
@@ -115,6 +116,21 @@ var data = [{
 //Plotly.newPlot("myDivPie", data);
 >>>>>>> 75488c6b40c46023a7bf2fcf5866469ead771221
 
+=======
+//Plotly Pie Chart
+var data = [{
+    values: [19, 26, 55],
+    labels: ["Residential", "Non-Residential", "Utility"],
+    type: "pie"
+}];
+
+<<<<<<< HEAD
+    // Plotly.newPlot("myDivPie", data);
+=======
+//Plotly.newPlot("myDivPie", data);
+>>>>>>> 75488c6b40c46023a7bf2fcf5866469ead771221
+
+>>>>>>> develop
 //Plotly Bubble Chart
 var trace1 = {
     x: [1, 2, 3, 4],
@@ -269,5 +285,9 @@ var layout = {
               ]
             });
           
+<<<<<<< HEAD
+          });
+>>>>>>> develop
+=======
           });
 >>>>>>> develop
