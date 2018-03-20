@@ -1,6 +1,20 @@
 //import $ from 'jquery';
 //import 'fullcalendar';
 
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAKJlo_j-vzp3V41tJo79yafU1xxSIo2Qk",
+    authDomain: "me-mood.firebaseapp.com",
+    databaseURL: "https://me-mood.firebaseio.com",
+    projectId: "me-mood",
+    storageBucket: "me-mood.appspot.com",
+    messagingSenderId: "678977102390"
+  //end of firebase function
+  };
+  
+</script>
 //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
 //var horoscopeSign = "";
 $(document).ready(function () {
@@ -32,6 +46,7 @@ $(document).ready(function () {
           //end of new object entry
         }
         //push to firebase database
+        firebase.initializeApp(config);
         database.ref().push(newMood);
 
         //clear out the form text boxes after submit is pressed
@@ -284,3 +299,5 @@ var layout = {
           
           });
         });
+        //end of firebase function
+  };
