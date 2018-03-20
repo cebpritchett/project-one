@@ -117,12 +117,14 @@ var layout = {
 
 //Plotly.newPlot("myDiv", data, layout);
   
+
 //*********************End Chart Input*************************** 
 
-// To-do List Main Page //
-    $(document).ready(function(){
 
-        $(function() {
+
+  // To-do List Main Page //
+    $(document).ready(function() {
+        
             $("calendar").fullCalendar({
               defaultView: "listWeek",
           
@@ -139,8 +141,31 @@ var layout = {
                 center: "",
                 right: "listDay,listWeek,listMonth"
                       },
-              events: "https://fullcalendar.io/demo-events.json"
-                                         });
+              defaultDate: '2018-03-19',
+              editable: true,
+              selectable: true,
+              eventLimit: true,
+              events: {
+                url:'php/get-events.php',
+                error: function(){
+                  $('script-warning').show();
+                }
+              }
+                loading: function(bool){
+                  $('#loading').toggle(bool);
+                   }
+                    eventRender: function(event, el) {
+                       if (event.start.hasZone()) {
+                         el.find('.fc-title').after(
+                           $('<div class="tzo"/>').text(event.start.format('Z'))
+                         );
+                        }
+                       }
+                    }
+                    dayClick: function(date) {
+                      console.log('dayClick', date.format());
+                    }    
+                                   });
           });
         });
           
