@@ -66,15 +66,10 @@ label {
 
 }
 
-<<<<<<< HEAD
 #calendar {
     max-width: 900px;
     margin: 40px auto;
 }
-=======
-
-
->>>>>>> develop
 #modal1 {
     text-align: center;
     padding-top: 2%;
@@ -170,20 +165,14 @@ label {
     margin-right: 15%;
     text-align: center;
 }
-<<<<<<< HEAD
 /*Stats Page*/
 
 #myDivLine {
-    margin-top: 2%;
+    margin-top: 0%;
     margin-left: 25%;
     margin-right:25%;
+    border-color: black;
     background-color: #F8E3BC;
-=======
-
-#myDivPie {
-    margin-left: 5%;
-    background-color: #DE9B84;
->>>>>>> develop
     color: #1D1941;
     text-align: center;
 }
@@ -199,5 +188,6 @@ h2{
     margin-right: auto;
     background-color: #F8E3BC;
     color: #1D1941;
+    border-color: black;
 
 }
