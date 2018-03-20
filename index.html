@@ -14,22 +14,33 @@
   
     <!--Linking Local CSS-->
         <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css" />
-        <link rel="stylesheet" type="text/css" href="assets/style.css">   
-    
-  <!--Link for calendar css-->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="assets/style.css">  
+        <link href='assets/fullcalendar.min.css' rel='stylesheet' media='print' />
+        <link href='assets/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+ 
+       
+        <!--Link to googlefonts -->
+     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!--Link for calendar css-->
    <link rel='stylesheet' type='text/css' href='assets/fullcalendar.css' />
-  <script type='text/javascript' src='assets/jquery.js'></script>
+ 
+   <!-- Jquery and Javascript -->
+   <script src='assets/lib/moment.min.js'></script>
+   <script src='assets/lib/jquery.min.js'></script>
+   <script src='assets/fullcalendar.min.js'></script>
+   <script type='text/javascript' src='assets/jquery.js'></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type='text/javascript' src='assets/fullcalendar.js'></script>
-    <!--Link to googlefonts -->
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+   
 
     <!--Link to googlefonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
     <!--Page Title-->
-        <title>MEMOod Home</title>
 
+        <title>Me Mood Home</title>
+
+    
 </head>
 
 <body>
@@ -37,7 +48,7 @@
         <!--Jumbotron Header-->
         <h1> Delete Me </h1>
         <div class="jumbotron">
-            <h1 class="display-4">MEMOod</h1>
+            <h1 class="display-4">Me Mood</h1>
             <br>
             <p class="lead">HOME PAGE</p>
             <br>
@@ -71,17 +82,47 @@
                 </div>
                 <br>
                 <div class="form-group">
+                    <label for="moodlevel">Rate your mood from 1 (worst mood) to 5 (best mood)</label>
+                    <select class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                  </div>
+                  <br>
+                <div class="form-group">
                     <label for="jounal">Journal your thoughts here:</label>
                     <textarea class="form-control" id="journal-input" rows="5" placeholder="Today I feel.."></textarea>
                   </div>
             </form>
             <br>
             <button id="modalsubmit">Submit</button>
-                
-        <!--end of modal div-->
         </div>
+             <!--end of modal div-->
 
-    <div id='calendar'></div>
+             
+        <!-- ToDo list -->
+       
+        <div id='calendar'>insert todo list here
+
+
+
+
+
+
+
+            </div>  
+     <!-- Quote insert -->
+
+        <div id='quote'> insert quote here
+
+
+
+
+              </div>
+                    
 
 
 
@@ -89,8 +130,7 @@
     <!-- Optional JavaScript -->
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>   
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
