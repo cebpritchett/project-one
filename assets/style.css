@@ -66,8 +66,6 @@ label {
 
 }
 
-<<<<<<< HEAD
-=======
 #calendar {
     max-width: 900px;
     margin: 40px auto;
@@ -105,7 +103,6 @@ label {
 
 }
 
->>>>>>> develop
 a:hover { 
     color: #F8E3BC;
 }
@@ -123,16 +120,27 @@ a:hover {
     margin-right: 15%;
     text-align: center;
 }
-#myDivPie {
-    margin-left: 5%;
-    background-color: #DE9B84;
+/*Stats Page*/
+
+#myDivLine {
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right:25%;
+    background-color: #F8E3BC;
     color: #1D1941;
     text-align: center;
 }
-#myDiv {
-    
-    margin-right: 7%;
-    background-color: #DE9B84;
-    color: #1D1941;
+.svg-container{
+background-color: #F8E3BC;
+}
+h2{
     text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F8E3BC;
+    color: #1D1941;
+
 }

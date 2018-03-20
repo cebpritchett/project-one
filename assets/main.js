@@ -1,12 +1,11 @@
 import $ from 'jquery';
 import 'fullcalendar';
 
-
 //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
 //var horoscopeSign = "";
 $(document).ready(function () {
 
-    //hide hider and popup_box
+  //hide hider and popup_box
     $("#modal1").show();
     //on click hide the message and the
     $("#modalsubmit").click(function () {
@@ -15,8 +14,6 @@ $(document).ready(function () {
 
         //end of modal fadout function
     });
-
-
 
     //Form submit funtion for first modal
 
@@ -44,150 +41,7 @@ $(document).ready(function () {
 
 });
 
-//Stats Page
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-//*********************Begin Chart Input**********************
-
-    //Plotly Pie Chart Start
-        var data = [
-        {
-            values: [19, 26, 55],
-            labels: ["Residential", "Non-Residential", "Utility"],
-            type: "pie"
-        }
-        ];
-
-        Plotly.newPlot("myDivPie", data);
-    //Plotly Pie Chart End
-
-    //Plotly Line Chart Start
-        Plotly.d3.csv(
-          "https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
-          function(err, rows) {
-            function unpack(rows, key) {
-              return rows.map(function(row) {
-                return row[key];
-              });
-            }
-
-            var trace1 = {
-              type: "scatter",
-              mode: "lines",
-              name: "AAPL High",
-              x: unpack(rows, "Date"),
-              y: unpack(rows, "AAPL.High"),
-              line: { color: "#17BECF" }
-            };
-
-            var trace2 = {
-              type: "scatter",
-              mode: "lines",
-              name: "AAPL Low",
-              x: unpack(rows, "Date"),
-              y: unpack(rows, "AAPL.Low"),
-              line: { color: "#7F7F7F" }
-            };
-
-            var data = [trace1, trace2];
-
-            var layout = {
-              title: "Basic Time Series"
-            };
-
-            Plotly.newPlot("myDiv", data, layout);
-          }
-        );
-     //Plotly Line Chart Start
-     
-//*********************End Chart Input***************************
-=======
-//Plotly Pie Chart
-var data = [{
-    values: [19, 26, 55],
-    labels: ["Residential", "Non-Residential", "Utility"],
-    type: "pie"
-}];
-
-<<<<<<< HEAD
-    // Plotly.newPlot("myDivPie", data);
-=======
-//Plotly.newPlot("myDivPie", data);
->>>>>>> 75488c6b40c46023a7bf2fcf5866469ead771221
-
-=======
-//Plotly Pie Chart
-var data = [{
-    values: [19, 26, 55],
-    labels: ["Residential", "Non-Residential", "Utility"],
-    type: "pie"
-}];
-
-<<<<<<< HEAD
-    // Plotly.newPlot("myDivPie", data);
-=======
-//Plotly.newPlot("myDivPie", data);
->>>>>>> 75488c6b40c46023a7bf2fcf5866469ead771221
-
->>>>>>> develop
-//Plotly Bubble Chart
-var trace1 = {
-    x: [1, 2, 3, 4],
-    y: [10, 11, 12, 13],
-    mode: "markers",
-    marker: {
-        size: [40, 60, 80, 100]
-    }
-};
-
-var data = [trace1];
-
-var layout = {
-    title: "Marker Size",
-    showlegend: false,
-    height: 400,
-    width: 480
-};
-
-//Plotly.newPlot("myDiv", data, layout);
-  
-
-
-
-<<<<<<< HEAD
-    // Plotly.newPlot("myDiv", data, layout);
-  
-// To-do List Main Page //
-    $(document).ready(function(){
-
-        $(function() {
-            $("calendar").fullCalendar({
-              defaultView: "listWeek",
-          
-              // customize the button names,
-              // otherwise they'd all just say "list"
-              views: {
-                listDay: { buttonText: "list day" },
-                listWeek: { buttonText: "list week" },
-                listMonth: { buttonText: "list month" }
-                     },
-          
-              header: {
-                left: "title",
-                center: "",
-                right: "listDay,listWeek,listMonth"
-                      },
-              events: "https://fullcalendar.io/demo-events.json"
-                                         });
-          });
-        });
-          
-
-
-=======
 // To-do List on Home Page //{
-
 
     $(document).ready(function(){
 
@@ -215,15 +69,11 @@ var layout = {
           });
         });
           
->>>>>>> 75488c6b40c46023a7bf2fcf5866469ead771221
 
         // trigger events on calendar
         $('#calendar').fullCalendar({
             eventClick: function(calEvent, jsEvent, view) {
-<<<<<<< HEAD
-=======
                 console.log(calendar)
->>>>>>> 75488c6b40c46023a7bf2fcf5866469ead771221
           
               alert('Event: ' + calEvent.title);
               alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
@@ -252,42 +102,54 @@ var layout = {
             }
           });
 
-
-        // Full Calendar on Calendar Page//
+// Full Calendar on Calendar Page//
         $(function() {
+          $("#calendar").fullCalendar({ eventClick: function(eventObj) {
+              if (eventObj.url) {
+                alert("Clicked " + eventObj.title + ".\n" + "Will open " + eventObj.url + " in a new tab");
 
-            $('#calendar').fullCalendar({
-              eventClick: function(eventObj) {
-                if (eventObj.url) {
-                  alert(
-                    'Clicked ' + eventObj.title + '.\n' +
-                    'Will open ' + eventObj.url + ' in a new tab'
-                  );
-          
-                  window.open(eventObj.url);
-          
-                  return false; // prevents browser from following link in current tab.
-                } else {
-                  alert('Clicked ' + eventObj.title);
-                }
-              },
-              defaultDate: '2018-03-15',
-              events: [
-                {
-                  title: 'simple event',
-                  start: '2018-03-02'
-                },
-                {
-                  title: 'event with URL',
-                  url: 'https://www.google.com/',
-                  start: '2018-03-03'
-                }
-              ]
-            });
-          
-<<<<<<< HEAD
-          });
->>>>>>> develop
-=======
-          });
->>>>>>> develop
+                window.open(eventObj.url);
+
+                return false; // prevents browser from following link in current tab.
+              } else {
+                alert("Clicked " + eventObj.title);
+              }
+            }, defaultDate: "2018-03-15", events: [{ title: "simple event", start: "2018-03-02" }, { title: "event with URL", url: "https://www.google.com/", start: "2018-03-03" }] });
+
+//Stats Page Data
+//*********************Begin Chart Input**********************//
+import {Chart} from 'chart.js';
+import firebase from 'firebase';
+  //Plotly Pie Chart Start//
+    var data = [{ 
+      values:  [19, 26, 55], 
+      labels:  ["Residential", "Non-Residential", "Utility"], 
+      type: "pie" }];
+
+      Plotly.newPlot("myDivPie", data);
+  //Plotly Pie Chart End//
+
+  //Plotly Line Chart Start//
+    var trace1 = { x: [1, 2, 3, 4], y: [10, 15, 13, 17], type: "scatter" };
+    var data = [trace1];
+        Plotly.newPlot("myDivLine", data);
+  //Plotly Line Chart End//
+
+  //Plotly Bubble Chart Start//
+    var trace1 = { 
+      x: [1, 2, 3, 4], 
+      y: [10, 11, 12, 13], 
+      mode: "markers", 
+      marker: { size: [40, 60, 80, 100] } 
+    };
+    var data = [trace1];
+    var layout = { 
+    title: "Marker Size", 
+    showlegend: false, 
+
+    height: 400, 
+    width: 480 
+  };
+});
+  //Plotly Bubble Chart End
+//*********************End Chart Input**********************//
