@@ -21,6 +21,13 @@
     <!-- Numeric JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
 
+    <!--Full Calendar -->
+    <link href="assets/fullcalendar.css" rel="stylesheet">
+    <link href="assets/fullcalendar.print.css" rel="stylesheet" media="print">
+   
+
+
+
     <!--Page Title-->
     <title>Me Mood Stats</title>
 
@@ -56,17 +63,24 @@
     </header>
 
 
-    <div class='calendar'>
-
-    <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
+        <div class="calendar" class"fc fc-unthemed fc-ltr">
+            <div class= "fc-toolbar"></div>
+             <div class="fc-left"></div>
+            <div class="fc-right"></div>
+            <div class="fc-center"></div>
+            <div class="fc-clear"></div>
           </div>
+        
+            <div class="fc-view-container" style>
+                <div class="fc-view fc-month-view fc-basic-view" style></div>
+            </div>
 
 
 
-
-
-
-    <script src="assets/calendar.js"></script>
+            <script src="assets/fullcalendar.js"></script>
+            <script src="assets/lib/moment.min.js"></script>
+            <script src="assets/lib/jquery.min.js"></script>
+            <script src="assets/fullcalendar.min.js"></script>
+    
     </body>
 </html>
