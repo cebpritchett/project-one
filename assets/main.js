@@ -12,9 +12,7 @@ $(document).ready(function () {
 
         $("#modal1").hide();
 
-
         //end of modal fadout function
-
     });
 
     //Form submit funtion for first modal
@@ -39,53 +37,11 @@ $(document).ready(function () {
             $("#giph-results").html(response);
         });
     });
+
+
 });
 
-
-// To-do List on Home Page //
-
-
-$(document).ready(function() {
-    $(function() {
-      $('#calendar').fullCalendar({
-        defaultView: 'listWeek',
-        views: {
-          listDay: { buttonText: 'list day' },
-          listWeek: { buttonText: 'list week' },
-          listMonth: { buttonText: 'list month' }
-        },
-        header: {
-          left: 'title',
-          center: '',
-          right: 'listDay,listWeek,listMonth'
-        },
-        events: 'https://fullcalendar.io/demo-events.json'
-      })
-    });
-    eventRender: function(event, element, start, end, timezone, callback) {
-      element.qtip({
-        content: event.description
-        startEditable: true;
-                   });
-                                          });
-              });
-      });
-
-
-
-
-
-
-
 //Stats Page
-//Plotly Pie Chart
-var data = [{
-    values: [19, 26, 55],
-    labels: ["Residential", "Non-Residential", "Utility"],
-    type: "pie"
-}];
-
-//Plotly.newPlot("myDivPie", data);
 
 //*********************Begin Chart Input**********************
 
@@ -163,10 +119,62 @@ var layout = {
   
 //*********************End Chart Input*************************** 
 
+// To-do List Main Page //
+    $(document).ready(function(){
 
+        $(function() {
+            $("calendar").fullCalendar({
+              defaultView: "listWeek",
+          
+              // customize the button names,
+              // otherwise they'd all just say "list"
+              views: {
+                listDay: { buttonText: "list day" },
+                listWeek: { buttonText: "list week" },
+                listMonth: { buttonText: "list month" }
+                     },
+          
+              header: {
+                left: "title",
+                center: "",
+                right: "listDay,listWeek,listMonth"
+                      },
+              events: "https://fullcalendar.io/demo-events.json"
+                                         });
+          });
+        });
           
 
 
+// To-do List on Home Page //{
+
+
+    $(document).ready(function(){
+
+     var todoList = document.createElement("fullcalendar");
+     list.addEventListener('click', function() { 
+         console.log(todoList)
+            $("#calendar").fullCalendar({
+              defaultView: "listWeek",
+          
+              // customize the button names,
+              // otherwise they'd all just say "list"
+              views: {
+                listDay: { buttonText: "list day" },
+                listWeek: { buttonText: "list week" },
+                listMonth: { buttonText: "list month" }
+                     },
+          
+              header: {
+                left: "title",
+                center: "",
+                right: "listDay,listWeek,listMonth"
+                      },
+              events: "https://fullcalendar.io/demo-events.json"
+                                         });
+          });
+        });
+         
 
         // trigger events on calendar
         $('#calendar').fullCalendar({
