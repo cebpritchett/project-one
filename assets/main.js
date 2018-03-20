@@ -1,6 +1,9 @@
+<<<<<<< HEAD
+=======
 import $ from 'jquery';
 import 'fullcalendar';
 
+>>>>>>> d1d1406a6ddba5f94125ce98dbe1f1d011ec2927
 //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
 //var horoscopeSign = "";
 $(document).ready(function () {
@@ -15,6 +18,18 @@ $(document).ready(function () {
         //end of modal fadout function
     });
 
+<<<<<<< HEAD
+
+
+    //Form submit funtion for first modal
+
++    $(".gifSubmit").submit(function (event) {
+        event.preventDefault();
++       var moodInput = $("#emotion-input").val().trim();
+        var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + moodInput + "&api_key=H8YEjrprBP114UoKPFK4mv1xKW8sKR6o";
+
++        // AJAX call to giphy API
+=======
     //Form submit funtion for first modal
 
     $(".giphSubmit").submit(function (event) {
@@ -25,16 +40,29 @@ $(document).ready(function () {
         var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + moodInput + "&api_key=H8YEjrprBP114UoKPFK4mv1xKW8sKR6o";
 
         // working on ajax call for giphy api
+>>>>>>> d1d1406a6ddba5f94125ce98dbe1f1d011ec2927
         $.ajax({
             url: giphyURL,
             method: "GET"
         }).then(function (response) {
+<<<<<<< HEAD
+            var results = response.data;
+            for (var i = 0; i < results.length; i++) {
+                var obj = results[i];
+                var gifDiv = $("<div class='gif-results'>");
+                var gifImage = $("<img>");
+                gifImage.attr("src", obj.images.fixed_height.url);
+                gifDiv.append(gifImage);
+                $("#gifs-appear-here").prepend(gifDiv);
+            }
+=======
 
             console.log(response);
             var results = response.data;
             console.log(results);
 
             $("#giph-results").html(response);
+>>>>>>> d1d1406a6ddba5f94125ce98dbe1f1d011ec2927
         });
     });
 
@@ -42,6 +70,17 @@ $(document).ready(function () {
 });
 
 //Stats Page
+<<<<<<< HEAD
+//Plotly Pie Chart
+var data = [{
+    values: [19, 26, 55],
+    labels: ["Residential", "Non-Residential", "Utility"],
+    type: "pie"
+}];
+
+//Plotly.newPlot("myDivPie", data);
+
+=======
 
 //*********************Begin Chart Input**********************
 
@@ -96,6 +135,7 @@ $(document).ready(function () {
         );
      //Plotly Line Chart Start
      
+>>>>>>> d1d1406a6ddba5f94125ce98dbe1f1d011ec2927
 //Plotly Bubble Chart
 var trace1 = {
     x: [1, 2, 3, 4],
@@ -116,6 +156,39 @@ var layout = {
 };
 
 //Plotly.newPlot("myDiv", data, layout);
+<<<<<<< HEAD
+
+
+
+/* $(function () {
+    $('#calendar').fullCalendar({
+        defaultView: 'listWeek',
+
+        // customize the button names,
+        // otherwise they'd all just say "list"
+        views: {
+            listDay: {
+                buttonText: 'list day'
+            },
+            listWeek: {
+                buttonText: 'list week'
+            },
+            listMonth: {
+                buttonText: 'list month'
+            }
+        },
+
+        header: {
+            left: 'title',
+            center: '',
+            right: 'listDay,listWeek,listMonth'
+        },
+        events: 'https://fullcalendar.io/demo-events.json'
+    })
+});
+
+*/
+=======
   
 //*********************End Chart Input*************************** 
 
@@ -243,3 +316,4 @@ var layout = {
             });
           
           });
+>>>>>>> d1d1406a6ddba5f94125ce98dbe1f1d011ec2927

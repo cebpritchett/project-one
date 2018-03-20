@@ -113,6 +113,38 @@ a:hover {
     text-align: center;
     max-width: 900px;
     margin: 40px auto;
+}
+#modal1 {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F8E3BC;
+    color: #1D1941;
+}
+#modalheader {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+}
+#modalsubmit {
+    background-color: #1D1941;
+    color: #F8E3BC;
+    padding: 2%;
+}
+.nav-link {
+    color: #DE9B84;
+}
+form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+label {
+    padding-bottom: 1%;
+
     }
 
 #quote {
@@ -122,6 +154,7 @@ a:hover {
     margin-left: 15%;
     margin-right: 15%;
     text-align: center;
+}
 .entries {
     background-color: #DE9B84;
     color: #1D1941;
@@ -130,6 +163,7 @@ a:hover {
     margin-right: 15%;
     text-align: center;
 }
+
 #myDivPie {
     margin-left: 5%;
     background-color: #DE9B84;
