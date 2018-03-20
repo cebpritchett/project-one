@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import 'fullcalendar';
 
-
 //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
 //var horoscopeSign = "";
 $(document).ready(function () {
@@ -17,8 +16,6 @@ $(document).ready(function () {
         //end of modal fadout function
 
     });
-
-
 
     //Form submit funtion for first modal
 
@@ -90,6 +87,59 @@ var data = [{
 
 //Plotly.newPlot("myDivPie", data);
 
+//*********************Begin Chart Input**********************
+
+    //Plotly Pie Chart Start
+        var data = [
+        {
+            values: [19, 26, 55],
+            labels: ["Residential", "Non-Residential", "Utility"],
+            type: "pie"
+        }
+        ];
+
+        Plotly.newPlot("myDivPie", data);
+    //Plotly Pie Chart End
+
+    //Plotly Line Chart Start
+        Plotly.d3.csv(
+          "https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
+          function(err, rows) {
+            function unpack(rows, key) {
+              return rows.map(function(row) {
+                return row[key];
+              });
+            }
+
+            var trace1 = {
+              type: "scatter",
+              mode: "lines",
+              name: "AAPL High",
+              x: unpack(rows, "Date"),
+              y: unpack(rows, "AAPL.High"),
+              line: { color: "#17BECF" }
+            };
+
+            var trace2 = {
+              type: "scatter",
+              mode: "lines",
+              name: "AAPL Low",
+              x: unpack(rows, "Date"),
+              y: unpack(rows, "AAPL.Low"),
+              line: { color: "#7F7F7F" }
+            };
+
+            var data = [trace1, trace2];
+
+            var layout = {
+              title: "Basic Time Series"
+            };
+
+            Plotly.newPlot("myDiv", data, layout);
+          }
+        );
+     //Plotly Line Chart Start
+     
 //Plotly Bubble Chart
 var trace1 = {
     x: [1, 2, 3, 4],
@@ -111,6 +161,77 @@ var layout = {
 
 //Plotly.newPlot("myDiv", data, layout);
   
+//*********************End Chart Input*************************** 
+
+
+          
 
 
 
+        // trigger events on calendar
+        $('#calendar').fullCalendar({
+            eventClick: function(calEvent, jsEvent, view) {
+                console.log(calendar)
+
+          
+              alert('Event: ' + calEvent.title);
+              alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+              alert('View: ' + view.name);
+          
+              // change the border color just for fun
+              $(this).css('border-color', 'red');
+          
+            }
+          });
+
+          $('#calendar').fullCalendar({
+            events: [
+              {
+                title: 'My Event',
+                start: '2010-01-01',
+                url: 'http://google.com/'
+              }
+              // other events here
+            ],
+            eventClick: function(event) {
+              if (event.url) {
+                window.open(event.url);
+                return false;
+              }
+            }
+          });
+
+
+        // Full Calendar on Calendar Page//
+        $(function() {
+
+            $('#calendar').fullCalendar({
+              eventClick: function(eventObj) {
+                if (eventObj.url) {
+                  alert(
+                    'Clicked ' + eventObj.title + '.\n' +
+                    'Will open ' + eventObj.url + ' in a new tab'
+                  );
+          
+                  window.open(eventObj.url);
+          
+                  return false; // prevents browser from following link in current tab.
+                } else {
+                  alert('Clicked ' + eventObj.title);
+                }
+              },
+              defaultDate: '2018-03-15',
+              events: [
+                {
+                  title: 'simple event',
+                  start: '2018-03-02'
+                },
+                {
+                  title: 'event with URL',
+                  url: 'https://www.google.com/',
+                  start: '2018-03-03'
+                }
+              ]
+            });
+          
+          });
