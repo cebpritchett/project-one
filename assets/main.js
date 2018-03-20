@@ -1,5 +1,5 @@
-import $ from 'jquery';
-import 'fullcalendar';
+//import $ from 'jquery';
+//import 'fullcalendar';
 
 //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
 //var horoscopeSign = "";
@@ -7,14 +7,50 @@ $(document).ready(function () {
 
     //hide hider and popup_box
     $("#modal1").show();
+    $('#calendar').hide();
+    $('#quote').hide();
     //on click hide the message and the
     $("#modalsubmit").click(function () {
 
         $("#modal1").hide();
+        $('#calendar').show();
+        $('#quote').show();
+        
+    //add the following to the intitialize firebase
 
-        //end of modal fadout function
-    });
+        //set variables for user input
+        var date = moment().format('L');
+        var emotion = $("#emotion-input").val().trim();
+        var journal = $("#journal-input").val().trim();
+        
 
+        //create temporary object to stor input of user data
+        var newMood ={ 
+          date: date,
+          emotion: emotion,
+          journal: journal,
+          //end of new object entry
+        }
+        //push to firebase database
+        database.ref().push(newMood);
+
+        //clear out the form text boxes after submit is pressed
+        $("#emotion-input").val("");
+        $("#journal-input").val("");
+      //end of modal fadout function
+       });
+
+       //firebase event to add mood data to database
+        database.ref().on("child_added", function(childSnapshot, prevChildKey){
+        
+        //store snapshot data into variable
+          var tdate = childSnapshot.val().date;
+          var temotion = childSnapshot.val().emotion;
+          var tjournal = childSnapshot.val().journal;
+
+          
+        
+        
     //Form submit funtion for first modal
 
     $(".giphSubmit").submit(function (event) {
@@ -35,6 +71,10 @@ $(document).ready(function () {
             console.log(results);
 
             $("#giph-results").html(response);
+
+            //add data from firebase to the table
+        $("#table > tbody").prepend("<tr><td>" + tdate + "</td><td>" + temotion + "</td><td>" + results + "</td><td>" + tjournal + "</td></tr>");
+
         });
     });
 
@@ -243,3 +283,4 @@ var layout = {
             });
           
           });
+        });
