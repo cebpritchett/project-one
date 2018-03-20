@@ -5,7 +5,7 @@ import 'fullcalendar';
 //var horoscopeSign = "";
 $(document).ready(function () {
 
-    //hide hider and popup_box
+  //hide hider and popup_box
     $("#modal1").show();
     //on click hide the message and the
     $("#modalsubmit").click(function () {
@@ -41,138 +41,7 @@ $(document).ready(function () {
 
 });
 
-//Stats Page
-
-//*********************Begin Chart Input**********************
-
-    //Plotly Pie Chart Start
-        var data = [
-        {
-            values: [19, 26, 55],
-            labels: ["Residential", "Non-Residential", "Utility"],
-            type: "pie"
-        }
-        ];
-
-        Plotly.newPlot("myDivPie", data);
-    //Plotly Pie Chart End
-
-    //Plotly Line Chart Start
-        Plotly.d3.csv(
-          "https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
-          function(err, rows) {
-            function unpack(rows, key) {
-              return rows.map(function(row) {
-                return row[key];
-              });
-            }
-
-            var trace1 = {
-              type: "scatter",
-              mode: "lines",
-              name: "AAPL High",
-              x: unpack(rows, "Date"),
-              y: unpack(rows, "AAPL.High"),
-              line: { color: "#17BECF" }
-            };
-
-            var trace2 = {
-              type: "scatter",
-              mode: "lines",
-              name: "AAPL Low",
-              x: unpack(rows, "Date"),
-              y: unpack(rows, "AAPL.Low"),
-              line: { color: "#7F7F7F" }
-            };
-
-            var data = [trace1, trace2];
-
-            var layout = {
-              title: "Basic Time Series"
-            };
-
-            Plotly.newPlot("myDiv", data, layout);
-          }
-        );
-     //Plotly Line Chart Start
-     
-//Plotly Bubble Chart
-var trace1 = {
-    x: [1, 2, 3, 4],
-    y: [10, 11, 12, 13],
-    mode: "markers",
-    marker: {
-        size: [40, 60, 80, 100]
-    }
-};
-
-var data = [trace1];
-
-var layout = {
-    title: "Marker Size",
-    showlegend: false,
-    height: 400,
-    width: 480
-};
-
-//Plotly.newPlot("myDiv", data, layout);
-  
-
-//*********************End Chart Input*************************** 
-
-
-
-  // To-do List Main Page //
-    $(document).ready(function() {
-        
-            $("calendar").fullCalendar({
-              defaultView: "listWeek",
-          
-              // customize the button names,
-              // otherwise they'd all just say "list"
-              views: {
-                listDay: { buttonText: "list day" },
-                listWeek: { buttonText: "list week" },
-                listMonth: { buttonText: "list month" }
-                     },
-          
-              header: {
-                left: "title",
-                center: "",
-                right: "listDay,listWeek,listMonth"
-                      },
-              defaultDate: '2018-03-19',
-              editable: true,
-              selectable: true,
-              eventLimit: true,
-              events: {
-                url:'php/get-events.php',
-                error: function(){
-                  $('script-warning').show();
-                }
-              }
-                loading: function(bool){
-                  $('#loading').toggle(bool);
-                   }
-                    eventRender: function(event, el) {
-                       if (event.start.hasZone()) {
-                         el.find('.fc-title').after(
-                           $('<div class="tzo"/>').text(event.start.format('Z'))
-                         );
-                        }
-                       }
-                    }
-                    dayClick: function(date) {
-                      console.log('dayClick', date.format());
-                    }    
-                                   });
-          });
-        });
-          
-
-
 // To-do List on Home Page //{
-
 
     $(document).ready(function(){
 
@@ -205,7 +74,6 @@ var layout = {
         $('#calendar').fullCalendar({
             eventClick: function(calEvent, jsEvent, view) {
                 console.log(calendar)
-
           
               alert('Event: ' + calEvent.title);
               alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
@@ -234,9 +102,11 @@ var layout = {
             }
           });
 
-
-        // Full Calendar on Calendar Page//
+// Full Calendar on Calendar Page//
         $(function() {
+          $("#calendar").fullCalendar({ eventClick: function(eventObj) {
+              if (eventObj.url) {
+                alert("Clicked " + eventObj.title + ".\n" + "Will open " + eventObj.url + " in a new tab");
 
             $('#calendar').fullCalendar({
               eventClick: function(eventObj) {
