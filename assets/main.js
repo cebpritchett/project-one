@@ -32,7 +32,7 @@ $("form").submit(function (event) {
             method: "GET"
         }).then(function (response) {
             var results = response.data;
-            for (var i = 0; i < results.length; i++) {
+            for (var i = 0; i < 1; i++) {
                 var obj = results[i];
                 var gifDiv = $("<div class='gif-results'>");
                 var gifImage = $("<img>");
