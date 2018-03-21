@@ -1,20 +1,71 @@
-import $ from 'jquery';
-import 'fullcalendar';
+//import $ from 'jquery';
+//import 'fullcalendar';
 
+src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAKJlo_j-vzp3V41tJo79yafU1xxSIo2Qk",
+    authDomain: "me-mood.firebaseapp.com",
+    databaseURL: "https://me-mood.firebaseio.com",
+    projectId: "me-mood",
+    storageBucket: "me-mood.appspot.com",
+    messagingSenderId: "678977102390"
+  //end of firebase function
+  };
+  
 //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
 //var horoscopeSign = "";
+
 $(document).ready(function () {
 
   //hide hider and popup_box
     $("#modal1").show();
+    $('#calendar').hide();
+    $('#quote').hide();
     //on click hide the message and the
     $("#modalsubmit").click(function () {
 
         $("#modal1").hide();
+        $('#calendar').show();
+        $('#quote').show();
+        
+    //add the following to the intitialize firebase
 
-        //end of modal fadout function
-    });
+        //set variables for user input
+        var date = moment().format('L');
+        var emotion = $("#emotion-input").val().trim();
+        var journal = $("#journal-input").val().trim();
+        
 
+        //create temporary object to stor input of user data
+        var newMood ={ 
+          date: date,
+          emotion: emotion,
+          journal: journal,
+          //end of new object entry
+        }
+        //push to firebase database
+        firebase.initializeApp(config);
+        database.ref().push(newMood);
+
+        //clear out the form text boxes after submit is pressed
+        $("#emotion-input").val("");
+        $("#journal-input").val("");
+      //end of modal fadout function
+       });
+
+       //firebase event to add mood data to database
+        database.ref().on("child_added", function(childSnapshot, prevChildKey){
+        
+        //store snapshot data into variable
+          var tdate = childSnapshot.val().date;
+          var temotion = childSnapshot.val().emotion;
+          var tjournal = childSnapshot.val().journal;
+
+          
+        
+        
     //Form submit funtion for first modal
 
     $(".giphSubmit").submit(function (event) {
@@ -35,6 +86,10 @@ $(document).ready(function () {
             console.log(results);
 
             $("#giph-results").html(response);
+
+            //add data from firebase to the table
+        $("#table > tbody").prepend("<tr><td>" + tdate + "</td><td>" + temotion + "</td><td>" + results + "</td><td>" + tjournal + "</td></tr>");
+
         });
     });
 });
@@ -158,3 +213,6 @@ $(document).ready(function () {
             });
           
           });
+        });
+        //end of firebase function
+  

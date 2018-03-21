@@ -106,15 +106,11 @@ label {
 a:hover { 
     color: #F8E3BC;
 }
-#calendar {
-    background-color: #DE9B84;
-    color: #1D1941;
-    border: 2px, black;
-    margin-left: 15%;
-    margin-right: 15%;
+.calendar {
+    padding-top: 2%;
+    padding-bottom: 2%;
     text-align: center;
-    max-width: 900px;
-    margin: 40px auto;
+    margin: auto;
 }
 #modal1 {
     text-align: center;
