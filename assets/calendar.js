@@ -1,9 +1,4 @@
-
-
-
-
 $(document).ready(function() {
-
     $('#calendar').fullCalendar({
       header: {
         left: 'prev,next today',
@@ -73,7 +68,9 @@ $(document).ready(function() {
       eventRender: function(event, element) {
         element.qtip({
           content: event.description
-                     });
-                                            });
-                });
         });
+    //end of calendar function
+     });
+
+//end of document.ready function
+});
