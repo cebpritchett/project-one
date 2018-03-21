@@ -1,5 +1,7 @@
-import $ from 'jquery';
-import 'fullcalendar';
+//import $ from 'jquery';
+//import 'fullcalendar';
+
+console.log("bob");
 
 //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
 //var horoscopeSign = "";
@@ -19,12 +21,12 @@ $(document).ready(function () {
 
     //Form submit funtion for first modal
 
-+    $(".gifSubmit").submit(function (event) {
+$("form").submit(function (event) {
         event.preventDefault();
-+       var moodInput = $("#emotion-input").val().trim();
+        var moodInput = $("#emotion-input").val().trim();
         var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + moodInput + "&api_key=H8YEjrprBP114UoKPFK4mv1xKW8sKR6o";
 
-+        // AJAX call to giphy API
+        // AJAX call to giphy API
         $.ajax({
             url: giphyURL,
             method: "GET"
@@ -48,55 +50,55 @@ $(document).ready(function () {
 
 //*********************Begin Chart Input**********************
 
-    //Plotly Pie Chart Start
-        var data = [
-        {
-            values: [19, 26, 55],
-            labels: ["Residential", "Non-Residential", "Utility"],
-            type: "pie"
-        }
-        ];
+    // //Plotly Pie Chart Start
+    //     var data = [
+    //     {
+    //         values: [19, 26, 55],
+    //         labels: ["Residential", "Non-Residential", "Utility"],
+    //         type: "pie"
+    //     }
+    //     ];
 
-        Plotly.newPlot("myDivPie", data);
-    //Plotly Pie Chart End
+    //     Plotly.newPlot("myDivPie", data);
+    // //Plotly Pie Chart End
 
-    //Plotly Line Chart Start
-        Plotly.d3.csv(
-          "https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
-          function(err, rows) {
-            function unpack(rows, key) {
-              return rows.map(function(row) {
-                return row[key];
-              });
-            }
+    // //Plotly Line Chart Start
+    //     Plotly.d3.csv(
+    //       "https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
+    //       function(err, rows) {
+    //         function unpack(rows, key) {
+    //           return rows.map(function(row) {
+    //             return row[key];
+    //           });
+    //         }
 
-            var trace1 = {
-              type: "scatter",
-              mode: "lines",
-              name: "AAPL High",
-              x: unpack(rows, "Date"),
-              y: unpack(rows, "AAPL.High"),
-              line: { color: "#17BECF" }
-            };
+    //         var trace1 = {
+    //           type: "scatter",
+    //           mode: "lines",
+    //           name: "AAPL High",
+    //           x: unpack(rows, "Date"),
+    //           y: unpack(rows, "AAPL.High"),
+    //           line: { color: "#17BECF" }
+    //         };
 
-            var trace2 = {
-              type: "scatter",
-              mode: "lines",
-              name: "AAPL Low",
-              x: unpack(rows, "Date"),
-              y: unpack(rows, "AAPL.Low"),
-              line: { color: "#7F7F7F" }
-            };
+    //         var trace2 = {
+    //           type: "scatter",
+    //           mode: "lines",
+    //           name: "AAPL Low",
+    //           x: unpack(rows, "Date"),
+    //           y: unpack(rows, "AAPL.Low"),
+    //           line: { color: "#7F7F7F" }
+    //         };
 
-            var data = [trace1, trace2];
+    //         var data = [trace1, trace2];
 
-            var layout = {
-              title: "Basic Time Series"
-            };
+    //         var layout = {
+    //           title: "Basic Time Series"
+    //         };
 
-            Plotly.newPlot("myDiv", data, layout);
-          }
-        );
+    //         Plotly.newPlot("myDiv", data, layout);
+    //       }
+    //     );
      //Plotly Line Chart Start
      
 //Plotly Bubble Chart
@@ -155,7 +157,7 @@ var layout = {
     $(document).ready(function(){
 
      var todoList = document.createElement("fullcalendar");
-     list.addEventListener('click', function() { 
+     todoList.addEventListener('click', function() { 
          console.log(todoList)
             $("#calendar").fullCalendar({
               defaultView: "listWeek",
