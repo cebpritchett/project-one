@@ -2,32 +2,39 @@
 <html>
 <head>
     <!--Meta Tags-->
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
 
-    <!--Import materialize.css-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+<!--Import materialize.css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
 
-      <!--Link to googlefonts -->
-      <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    
-    <!--Linking Local CSS-->
-        <link rel="stylesheet" type="text/css" href='assets/style.css'></link>  
-        <link rel="stylesheet" type="text/css" media="screen" href='assets/reset.css'></link>
-        <link href='assets/calendar/lib/fullcalendar.min.css' rel='stylesheet' media='print'></link>
-        <link href='assets/calendar/lib/fullcalendar.print.min.css' rel='stylesheet' media='print'><link>
- 
-       
-   <!-- Jquery and Javascript -->
-   <script src='assets/calendar/lib/moment.min.js'></script>
-   <script src='assets/calendar/lib/jquery.min.js'></script>
-   <script src='assets/calendar/lib/fullcalendar.min.js'></script>
-   <script type='text/javascript' src='assets/jquery.js'></script>
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!--Linking Local CSS-->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css"></link>
+    <link rel="stylesheet" type="text/css" href="assets/style.css"></link>  
+    <link href="assets/calendar/lib/fullcalendar.min.css' rel='stylesheet' media='print'"></link>
+    <link href='assets/calendar/lib/fullcalendar.print.min.css' rel='stylesheet' media='print'><link>
+
+   
+    <!--Link to googlefonts -->
+ <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<!--Link for calendar css-->
+<link rel='stylesheet' type='text/css' href='assets/calendar/lib/fullcalendar.css' />
+
+<!-- Jquery and Javascript -->
+<script src='assets/calendar/lib/moment.min.js'></script>
+<script src='assets/calendar/lib/jquery.min.js'></script>
+<script src='assets/calendar/lib/fullcalendar.min.js'></script>
+<script type='text/javascript' src='assets/jquery.js'></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type='text/javascript' src='assets/calendar/fullcalendar.js'></script>
+
+
+<!--Link to googlefonts -->
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
  
     <!--Link to googlefonts -->
@@ -42,7 +49,7 @@
         <div class="jumbotron">
             <h1 class="display-4">Me Mood</h1>
             <br>
-            <p class="lead">HOME</p>
+            <p class="lead">Calendar</p>
             <br>
             <br>
         <!--Nav Bar -->
@@ -65,56 +72,8 @@
         
              
      <!--****************  ToDo list  **************** -->
-        <div id='calendar' class="fc fc-unthemed fc-ltr">
-         <div class="fc-toolbar fc-header-toolbar">
-             <div class="fc-left">
-                 <div class="fc-button-group">
-                     <button type"button" class="fc-prev-button fc-button fc-state-default fc-corner-left"
-                     aria-label="prev"></button>
-                     <button type="button" class="fc-next-button fc-button fc-state-default fc-corner-right" aria-label="next"></button>
-                 </div>
-                 <button class="fc-today-button fc-button fc-state-default fc-corner-left fc-corner-right" type="button">today</button>
-             </div>
+     <div id='calendar'>   </div>  
 
-                <div class="fc-left">
-                    <div class="fc-button-group">
-                        <button type"button" class="fc-listDay-button fc-button fc-state-default fc-corner-left">list day"></button>
-                        <button type="button" class="fc-listWeek-button fc-button fc-state-default fc-state-active"> list week"</button>
-                    </div>
-                    <button class="fc-month-button fc-button fc-state-default fc-corner-right">month</button>
-            
-                      </div>
-                     </div>
-
-<div class="fc-center">
-    Date
-</div>
-<div class="fc-clear"></div>
-        </div>  
-    <div class="fc-view-container" style>
-        <div class="fc-view fc-listWeek-view fc-list-view fc-widget-content" style>
-            <div class="fc-scroller" style="overflow-x: hidden; overflow-y: auto; height: 663px;">
-                <table class="fc-list-table">
-                    <tbody>
-                        <tr class="fc-list-heading" data-date="2018-03-22">
-                            <td class="fc-widget-header" colspan="3">
-                                <a class="fc-list-heading-main" data-goto="{"date": 2018-03-22", "type":"day"}>March 22, 2018</a>
-                            </td>
-                        </tr>
-                        <tr class="fc-list-item">
-                                <td class="fc-list-item fc-widget-content">all-day</td>
-                                <td class="fc-list-item-marker fc-widget-content">
-                                    <span class="fc-event-dot"></span>
-                                </td>
-                                <td class="fc-list-item-title fc-widget-content">
-                                    <a>Conference</a>
-                                </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
 
 <!-- ************** end of Todo-List ****************************//  -->
 
@@ -135,15 +94,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-          <!-- Optional JavaScript -->
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
-          <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
-          <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.css">
-         
-          <script src='assets/calendar/calendar.js'></script>
+    
+        
+           <!-- Optional JavaScript -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+           <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
+           <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.css">
+
+              <script src='assets/calendar/calendar.js'></script>
           <script src='assets/calendar/fullcalendar.js'></script>
           <script src='assets/calendar/lib/moment.js'></script>
           <script src='asseets/jquery.js'></script>
         <script src='assets/calendar/scheduler.js'></script>
+
+
+           <script src="assets/calendar/calendar.js"></script>
 </body>
 </html>
