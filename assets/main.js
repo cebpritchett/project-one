@@ -126,8 +126,9 @@ var layout = {
 
 
 
-// To-do List Main Page //
-$(document).ready(function() {
+//*************** To-do List Home Page ************************
+
+
 
 $('#calendar').fullCalendar({
   header: {
@@ -206,4 +207,3 @@ $('#calendar').fullCalendar({
   ]
 });
 
-});
