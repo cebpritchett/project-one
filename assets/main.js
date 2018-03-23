@@ -1,12 +1,5 @@
 //import $ from 'jquery';
 //import 'fullcalendar';
-<<<<<<< HEAD
-
-console.log("bob");
-=======
->>>>>>> develop
-
-
 
   // Initialize Firebase
   var config = {
@@ -21,6 +14,7 @@ console.log("bob");
   
 //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
 //var horoscopeSign = "";
+
 $(document).ready(function () {
 
     //hide hider and popup_box
@@ -67,11 +61,6 @@ $(document).ready(function () {
           var temotion = childSnapshot.val().emotion;
           var tjournal = childSnapshot.val().journal;
 
-        //end of modal fadout function
-    });
-
-
-
     //Form submit funtion for first modal
 
 $("form").submit(function (event) {
@@ -85,11 +74,8 @@ $("form").submit(function (event) {
             method: "GET"
         }).then(function (response) {
             var results = response.data;
-<<<<<<< HEAD
-            for (var i = 0; i < results.length; i++) {
-=======
+
             for (var i = 0; i < 1; i++) {
->>>>>>> develop
                 var obj = results[i];
                 var gifDiv = $("<div class='gif-results'>");
                 var gifImage = $("<img>");
@@ -181,8 +167,6 @@ var layout = {
   
 //*********************End Chart Input*************************** 
 
-<<<<<<< HEAD
-
 
 //*************** To-do List Home Page ************************
 
@@ -265,7 +249,6 @@ $('#calendar').fullCalendar({
   ]
 });
 
-=======
 // To-do List Main Page //
     $(document).ready(function(){
 
@@ -360,6 +343,28 @@ $('#calendar').fullCalendar({
               if (eventObj.url) {
                 alert("Clicked " + eventObj.title + ".\n" + "Will open " + eventObj.url + " in a new tab");
 
+                window.open(eventObj.url);
+
+                return false; // prevents browser from following link in current tab.
+              } else {
+                alert("Clicked " + eventObj.title);
+              }
+            }, defaultDate: "2018-03-15", events: [{ title: "simple event", start: "2018-03-02" }, { title: "event with URL", url: "https://www.google.com/", start: "2018-03-03" }] });
+
+//Stats Page Data
+//*********************Begin Chart Input**********************//
+
+    import {Chart} from 'chart.js';
+    import firebase from 'firebase';
+
+    //Plotly Line Chart Start//
+      var trace1 = { x: [1, 2, 3, 4], y: [10, 15, 13, 17], type: "scatter" };
+      var data = [trace1];
+      Plotly.newPlot("myDivLine", data);
+    //Plotly Line Chart End//
+    
+//*********************End Chart Input**********************//
+
             $('#calendar').fullCalendar({
               eventClick: function(eventObj) {
                 if (eventObj.url) {
@@ -392,6 +397,6 @@ $('#calendar').fullCalendar({
           };
         }
         //end of firebase function
+
     });
   });
->>>>>>> develop
