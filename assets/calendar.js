@@ -1,5 +1,8 @@
 $(function() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> eda682532bb88cb57a5cd0854810c2d9e083017d
   $('#calendar').fullCalendar({
     themeSystem: 'bootstrap4',
     header: {
