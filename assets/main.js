@@ -1,10 +1,25 @@
 //import $ from 'jquery';
 //import 'fullcalendar';
 
+<<<<<<< HEAD
 console.log("bob");
 
+=======
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAKJlo_j-vzp3V41tJo79yafU1xxSIo2Qk",
+    authDomain: "me-mood.firebaseapp.com",
+    databaseURL: "https://me-mood.firebaseio.com",
+    projectId: "me-mood",
+    storageBucket: "me-mood.appspot.com",
+    messagingSenderId: "678977102390"
+  //end of firebase function
+  };
+  
+>>>>>>> f9539d37d3dc6ce5c76eb7d515604b724b184b35
 //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
 //var horoscopeSign = "";
+
 $(document).ready(function () {
 
     //hide hider and popup_box
@@ -13,11 +28,6 @@ $(document).ready(function () {
     $("#modalsubmit").click(function () {
 
         $("#modal1").hide();
-
-        //end of modal fadout function
-    });
-
-
 
     //Form submit funtion for first modal
 
@@ -33,6 +43,8 @@ $("form").submit(function (event) {
         }).then(function (response) {
             var results = response.data;
             for (var i = 0; i < results.length; i++) {
+
+            for (var i = 0; i < 1; i++) {
                 var obj = results[i];
                 var gifDiv = $("<div class='gif-results'>");
                 var gifImage = $("<img>");
@@ -125,9 +137,12 @@ var layout = {
 //*********************End Chart Input*************************** 
 
 
+//*************** To-do List Home Page ************************
+
+
 
 // To-do List Main Page //
-
+ 
 $(function() {
   $('#calendar').fullCalendar({ 
     defaultView: 'listWeek',

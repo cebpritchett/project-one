@@ -124,7 +124,10 @@ undo previous rule in order to always show last border.
 /*
 Cells at the start of a week
 TODO: figure out better styling
+<<<<<<< HEAD
 
+=======
+>>>>>>> f9539d37d3dc6ce5c76eb7d515604b724b184b35
 .fc-ltr .fc-timeline .fc-em-cell div {
 	border-left: 3px solid #eee;
 	height: 100%;
@@ -460,4 +463,8 @@ tr.fc-collapsed > td > div {
   border-width: 1px 1px 0 0;
   padding: 2px 4px;
   font-size: 12px;
+<<<<<<< HEAD
   border-top-right-radius: 3px; }
+=======
+  border-top-right-radius: 3px; }
+>>>>>>> f9539d37d3dc6ce5c76eb7d515604b724b184b35
