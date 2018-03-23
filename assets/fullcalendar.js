@@ -552,8 +552,8 @@ function computeGreatestUnit(start, end) {
     var i;
     var unit;
     var val;
-    for (i = 0; i < unitsDesc.length; i++) {
-        unit = unitsDesc[i];
+    for (i = 0; i < exports.unitsDesc.length; i++) {
+        unit = exports.unitsDesc[i];
         val = computeRangeAs(unit, start, end);
         if (val >= 1 && isInt(val)) {
             break;
@@ -1256,11 +1256,7 @@ var $ = __webpack_require__(3);
 var util_1 = __webpack_require__(4);
 var ambigDateOfMonthRegex = /^\s*\d{4}-\d\d$/;
 var ambigTimeOrZoneRegex = /^\s*\d{4}-(?:(\d\d-\d\d)|(W\d\d$)|(W\d\d-\d)|(\d\d\d))((T| )(\d\d(:\d\d(:\d\d(\.\d+)?)?)?)?)?$/;
-var  newMomentProto = moment.function(); 
-
-
-
-// where we will attach our new methods
+var newMomentProto = moment.fn; // where we will attach our new methods
 exports.newMomentProto = newMomentProto;
 var oldMomentProto = $.extend({}, newMomentProto); // copy of original moment methods
 exports.oldMomentProto = oldMomentProto;
@@ -2319,13 +2315,13 @@ EmitterMixin_1.default.mixInto(GlobalEmitter);
 Object.defineProperty(exports, "__esModule", { value: true });
 var exportHooks = __webpack_require__(16);
 exports.viewHash = {};
-exportHooks.views = viewHash;
+exportHooks.views = exports.viewHash;
 function defineView(viewName, viewConfig) {
-    viewHash[viewName] = viewConfig;
+    exports.viewHash[viewName] = viewConfig;
 }
 exports.defineView = defineView;
 function getViewConfig(viewName) {
-    return viewHash[viewName];
+    return exports.viewHash[viewName];
 }
 exports.getViewConfig = getViewConfig;
 
@@ -2511,7 +2507,7 @@ var exportHooks = __webpack_require__(16);
 var options_1 = __webpack_require__(32);
 var util_1 = __webpack_require__(4);
 exports.localeOptionHash = {};
-exportHooks.locales = localeOptionHash;
+exportHooks.locales = exports.localeOptionHash;
 // NOTE: can't guarantee any of these computations will run because not every locale has datepicker
 // configs, so make sure there are English fallbacks for these in the defaults file.
 var dpComputableOptions = {
@@ -2612,7 +2608,7 @@ exports.populateInstanceComputableOptions = populateInstanceComputableOptions;
 // Will set this as the default locales for datepicker.
 function datepickerLocale(localeCode, dpLocaleCode, dpOptions) {
     // get the FullCalendar internal option hash for this locale. create if necessary
-    var fcOptions = localeOptionHash[localeCode] || (localeOptionHash[localeCode] = {});
+    var fcOptions = exports.localeOptionHash[localeCode] || (exports.localeOptionHash[localeCode] = {});
     // transfer some simple options from datepicker to fc
     fcOptions.isRTL = dpOptions.isRTL;
     fcOptions.weekNumberTitle = dpOptions.weekHeader;
@@ -2642,10 +2638,10 @@ function locale(localeCode, newFcOptions) {
     var fcOptions;
     var momOptions;
     // get the FullCalendar internal option hash for this locale. create if necessary
-    fcOptions = localeOptionHash[localeCode] || (localeOptionHash[localeCode] = {});
+    fcOptions = exports.localeOptionHash[localeCode] || (exports.localeOptionHash[localeCode] = {});
     // provided new options for this locales? merge them in
     if (newFcOptions) {
-        fcOptions = localeOptionHash[localeCode] = options_1.mergeOptions([fcOptions, newFcOptions]);
+        fcOptions = exports.localeOptionHash[localeCode] = options_1.mergeOptions([fcOptions, newFcOptions]);
     }
     // compute locale options that weren't defined.
     // always do this. newFcOptions can be undefined when initializing from i18n file,
