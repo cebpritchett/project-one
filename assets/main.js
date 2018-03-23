@@ -65,7 +65,7 @@ $(document).ready(function () {
 
           
         
-        
+      
     //Form submit funtion for first modal
 
     $(".giphSubmit").submit(function (event) {

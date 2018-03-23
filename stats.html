@@ -57,12 +57,35 @@
             <!-- Plotly chart will be drawn inside this DIV -->
         </div>
         <script>
-        var trace1 = {
-                x: [1,31],
-                y: [1,5],
-                type: 'scatter'
+            var trace1 = { 
+                x: [1, 2 ,3, 4, 5, 6, 7, 8],
+                y: [1, 5],
+                type:'scatter'
+            
             };
-            var data = [trace1];
+    var data = [trace1];
+            var layout = {
+                xaxis: {
+                    autotick: false,
+                    ticks: 'outside',
+                    tick0: 0,
+                    dtick: 1,
+                    ticklen: 5,
+                    tickwidth: 1,
+                    tickcolor: '#000'
+                
+                },
+                yaxis: {
+                    autotick: false,
+                    ticks: 'outside',
+                    tick0: 4,
+                    dtick: 3,
+                    ticklen: 5,
+                    tickwidth: 1,
+                    tickcolor: '#000'
+                }
+            };
+        
             Plotly.newPlot('myDivLine', data);
         </script>
 
