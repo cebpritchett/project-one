@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!--Meta Tags-->
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--Import materialize.css-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-  
+
     <!--Linking Local CSS-->
+
 
         <link rel="stylesheet" type="text/css" media="screen" href='assets/reset.css'></link>
         <link rel="stylesheet" type="text/css" href='assets/style.css'></link>  
@@ -37,9 +38,9 @@
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <!--Page Title-->
 
-        <title>Me Mood Home</title>
+    <title>Me Mood Home</title>
 
-    
+
 </head>
 
 <body>
@@ -51,27 +52,32 @@
             <p class="lead">HOME</p>
             <br>
             <br>
-        <!--Nav Bar -->
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="calendar.html">Calendar</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="entries.html">Entries</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="stats.html">Stats</a>
-            </li>
-        </ul>
+            <!--Nav Bar -->
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calendar.html">Calendar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="entries.html">Entries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="stats.html">Stats</a>
+                </li>
+            </ul>
     </header>
 
-        <!--Modal-->
-        <div id="modal1">
-            <div id="modalheader">
-                How are doing today?
+    <!--Modal-->
+    <div id="modal1">
+        <div id="modalheader">
+            How are doing today?
+        </div>
+        <br>
+        <form class="gifSubmit">
+            <div class="form-group">
+                <input type="text" class="form-control" id="emotion-input" placeholder="happy">
             </div>
             <br>
         <form class="gifSubmit">
@@ -88,12 +94,13 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                      </select>
-                  </div>
-                  <br>
+                    </select>
+                </div>
+                <br>
                 <div class="form-group">
                     <label for="jounal">Journal your thoughts here:</label>
                     <textarea class="form-control" id="journal-input" rows="5" placeholder="Today I feel.."></textarea>
+
                   </div>
             </div>
             </form>
@@ -116,9 +123,7 @@
       
         <div id='calendar'>
         </div>  
-    
-    
-             
+       
     <!-- Optional JavaScript -->
     <script src="assets/main.js"></script>
     <script src="assets/entries.js"></script>

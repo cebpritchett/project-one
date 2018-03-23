@@ -1,5 +1,4 @@
 $(function() {
-
   $('#calendar').fullCalendar({
     themeSystem: 'bootstrap4',
     header: {
