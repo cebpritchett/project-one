@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 var config = {
+=======
+    var config = {
+>>>>>>> 0ac078002989c6537cb0e3ff0fb0817ef462fe31
     apiKey: "AIzaSyAKJlo_j-vzp3V41tJo79yafU1xxSIo2Qk",
     authDomain: "me-mood.firebaseapp.com",
     databaseURL: "https://me-mood.firebaseio.com",

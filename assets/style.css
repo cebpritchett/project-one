@@ -9,11 +9,11 @@
 
 body {
     background: url("images/background.jpeg")no-repeat center center fixed;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -o-background-size: cover;
-     background-size: cover;
-     font-family: 'Quicksand', sans-serif;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .jumbotron {
@@ -23,10 +23,10 @@ body {
     padding: 25px;
 }
 
-#myDivPie{
-  margin-left:auto;
-  margin-right: auto;
-  margin-left:100px;
+#myDivPie {
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 100px;
 }
 
 #calendar {
@@ -49,32 +49,35 @@ body {
     background-color: #F8E3BC;
     color: #1D1941;
 }
+
 #modalheader {
     font-family: 'Quicksand', sans-serif;
     font-size: 50px;
 }
+
 #modalsubmit {
     background-color: #1D1941;
     color: #F8E3BC;
     padding: 2%;
 }
+
 .nav-link {
     color: #DE9B84;
 }
+
 form {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
 }
+
 label {
     padding-bottom: 1%;
-
 }
 
-#calendar {
-   
-}
+#calendar {}
+
 #modal1 {
     text-align: center;
     padding-top: 2%;
@@ -85,30 +88,34 @@ label {
     background-color: #F8E3BC;
     color: #1D1941;
 }
+
 #modalheader {
     font-family: 'Quicksand', sans-serif;
     font-size: 50px;
 }
+
 #modalsubmit {
     background-color: #1D1941;
     color: #F8E3BC;
     padding: 2%;
 }
+
 .nav-link {
     color: #DE9B84;
 }
+
 form {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
 }
+
 label {
     padding-bottom: 1%;
-
 }
 
-a:hover { 
+a:hover {
     color: #F8E3BC;
 }
 
@@ -129,28 +136,32 @@ a:hover {
     background-color: #F8E3BC;
     color: #1D1941;
 }
+
 #modalheader {
     font-family: 'Quicksand', sans-serif;
     font-size: 50px;
 }
+
 #modalsubmit {
     background-color: #1D1941;
     color: #F8E3BC;
     padding: 2%;
 }
+
 .nav-link {
     color: #DE9B84;
 }
+
 form {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
 }
+
 label {
     padding-bottom: 1%;
-
-    }
+}
 
 #quote {
     background-color: #DE9B84;
@@ -160,6 +171,7 @@ label {
     margin-right: 10%;
     text-align: center;
 }
+
 .entries {
     text-align: center;
     padding-top: 2%;
@@ -174,9 +186,19 @@ label {
 #myDivLine {
     margin-top: 0%;
     margin-left: auto;
-    margin-right:auto;
-    width:50%;
+    margin-right: auto;
+    width: 50%;
     border-color: black;
     color: #1D1941;
     text-align: center;
+}
+#dataTitle {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F8E3BC;
+    color: #1D1941;
 }
