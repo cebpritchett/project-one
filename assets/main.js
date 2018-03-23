@@ -32,7 +32,6 @@ $(document).ready(function () {
       var emotion = $("#emotion-input").val().trim();
       var stat = $("#stat").val();
       var journal = $("#journal-input").val().trim();
-    
       //create temporary object to stor input of user data
       var newMood ={ 
         date: date,
@@ -52,8 +51,6 @@ $(document).ready(function () {
 
       //end of modal fadout function
   //});
-
-
 
   //Form submit funtion for first modal
 
@@ -79,6 +76,7 @@ $(document).ready(function () {
           }
       });
   });
+
 
 
 });
@@ -156,136 +154,31 @@ var layout = {
   height: 400,
   width: 480
 };
-
+//DO NOT DELETE
 //Plotly.newPlot("myDiv", data, layout);
+
 
 //*********************End Chart Input*************************** 
 
 // To-do List Main Page //
-  $(document).ready(function(){
+ 
+$(function() {
+  $('#calendar').fullCalendar({ 
+    defaultView: 'listWeek',
 
-      $(function() {
-          $("calendar").fullCalendar({
-            defaultView: "listWeek",
-        
-            // customize the button names,
-            // otherwise they'd all just say "list"
-            views: {
-              listDay: { buttonText: "list day" },
-              listWeek: { buttonText: "list week" },
-              listMonth: { buttonText: "list month" }
-                   },
-        
-            header: {
-              left: "title",
-              center: "",
-              right: "listDay,listWeek,listMonth"
-                    },
-            events: "https://fullcalendar.io/demo-events.json"
-                                       });
-        });
-      });
-        
+    // customize the button names,
+    // otherwise they'd all just say "list"
+    views: {
+      listDay: { buttonText: 'list day' },
+      listWeek: { buttonText: 'list week' },
+      listMonth: { buttonText: 'list month' }
+    },
 
-
-// To-do List on Home Page //{
-
-  $(document).ready(function(){
-
-   var todoList = document.createElement("fullcalendar");
-   todoList.addEventListener('click', function() { 
-       console.log(todoList)
-          $("#calendar").fullCalendar({
-            defaultView: "listWeek",
-        
-            // customize the button names,
-            // otherwise they'd all just say "list"
-            views: {
-              listDay: { buttonText: "list day" },
-              listWeek: { buttonText: "list week" },
-              listMonth: { buttonText: "list month" }
-                   },
-        
-            header: {
-              left: "title",
-              center: "",
-              right: "listDay,listWeek,listMonth"
-                    },
-            events: "https://fullcalendar.io/demo-events.json"
-                                       });
-        });
-      });
-       
-
-      // trigger events on calendar
-      $('#calendar').fullCalendar({
-          eventClick: function(calEvent, jsEvent, view) {
-              console.log(calendar)
-        
-            alert('Event: ' + calEvent.title);
-            alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-            alert('View: ' + view.name);
-        
-            // change the border color just for fun
-            $(this).css('border-color', 'red');
-        
-          }
-        });
-
-        $('#calendar').fullCalendar({
-          events: [
-            {
-              title: 'My Event',
-              start: '2010-01-01',
-              url: 'http://google.com/'
-            }
-            // other events here
-          ],
-          eventClick: function(event) {
-            if (event.url) {
-              window.open(event.url);
-              return false;
-            }
-          }
-        });
-
-// Full Calendar on Calendar Page//
-      $(function() {
-        $("#calendar").fullCalendar({ eventClick: function(eventObj) {
-            if (eventObj.url) {
-              alert("Clicked " + eventObj.title + ".\n" + "Will open " + eventObj.url + " in a new tab");
-
-          $('#calendar').fullCalendar({
-            eventClick: function(eventObj) {
-              if (eventObj.url) {
-                alert(
-                  'Clicked ' + eventObj.title + '.\n' +
-                  'Will open ' + eventObj.url + ' in a new tab'
-                );
-        
-                window.open(eventObj.url);
-        
-                return false; // prevents browser from following link in current tab.
-              } else {
-                alert('Clicked ' + eventObj.title);
-              }
-            },
-            defaultDate: '2018-03-15',
-            events: [
-              {
-                title: 'simple event',
-                start: '2018-03-02'
-              },
-              {
-                title: 'event with URL',
-                url: 'https://www.google.com/',
-                start: '2018-03-03'
-              }
-            ]
-          });
-        
-        };
-      }
-      //end of firebase function
-  });
+    header: {
+      left: 'title',
+      center: '',
+      right: 'listDay,listWeek,listMonth'
+    },
+    events: 'https://fullcalendar.io/demo-events.json'
+  })
 });
