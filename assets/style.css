@@ -76,10 +76,8 @@ label {
     padding-bottom: 1%;
 }
 
+#calendar {}
 
-#calendar {
-   
-}
 #modal1 {
     text-align: center;
     padding-top: 2%;
@@ -193,4 +191,14 @@ label {
     border-color: black;
     color: #1D1941;
     text-align: center;
+}
+#dataTitle {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F8E3BC;
+    color: #1D1941;
 }
