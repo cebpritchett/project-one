@@ -32,7 +32,7 @@ $(document).ready(function () {
       var emotion = $("#emotion-input").val().trim();
       var stat = $("#stat").val();
       var journal = $("#journal-input").val().trim();
-    console.log(stat);
+    
       //create temporary object to stor input of user data
       var newMood ={ 
         date: date,
