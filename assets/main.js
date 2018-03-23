@@ -1,10 +1,6 @@
 //import $ from 'jquery';
 //import 'fullcalendar';
 
-<<<<<<< HEAD
-console.log("bob");
-
-=======
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyAKJlo_j-vzp3V41tJo79yafU1xxSIo2Qk",
@@ -16,7 +12,6 @@ console.log("bob");
   //end of firebase function
   };
   
->>>>>>> f9539d37d3dc6ce5c76eb7d515604b724b184b35
 //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
 //var horoscopeSign = "";
 
@@ -52,11 +47,8 @@ $("form").submit(function (event) {
                 gifDiv.append(gifImage);
                 $("#gifs-appear-here").prepend(gifDiv);
             }
-        });
-    });
+      
 
-
-});
 
 //Stats Page
 
@@ -137,12 +129,7 @@ var layout = {
 //*********************End Chart Input*************************** 
 
 
-//*************** To-do List Home Page ************************
-
-
-
-// To-do List Main Page //
- 
+//*************** To-do List Home Page ************************ 
 $(function() {
   $('#calendar').fullCalendar({ 
     defaultView: 'listWeek',
@@ -161,5 +148,6 @@ $(function() {
       right: 'listDay,listWeek,listMonth'
     },
     events: 'https://fullcalendar.io/demo-events.json'
+
   })
 });
