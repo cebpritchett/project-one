@@ -108,17 +108,14 @@ label {
 a:hover { 
     color: #F8E3BC;
 }
-<<<<<<< HEAD
 
-
-=======
 .calendar {
     padding-top: 2%;
     padding-bottom: 2%;
     text-align: center;
     margin: auto;
 }
->>>>>>> develop
+
 #modal1 {
     text-align: center;
     padding-top: 2%;
@@ -156,8 +153,8 @@ label {
     background-color: #DE9B84;
     color: #1D1941;
     border: 2px, black;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
     text-align: center;
 }
 .entries {
@@ -170,7 +167,6 @@ label {
     background-color: #F8E3BC;
     color: #1D1941;
 }
-/*Stats Page*/
 
 #myDivLine {
     margin-top: 0%;
@@ -181,15 +177,12 @@ label {
     color: #1D1941;
     text-align: center;
 }
-h2{
+#gifs-appear-here {
     text-align: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    float: left;
+    padding: 1%;
+    border: 2px solid #DE9B84;
+    margin-left: 10%;
     background-color: #F8E3BC;
     color: #1D1941;
-    border-color: black;
 }
-
