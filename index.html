@@ -17,20 +17,20 @@
         <link rel="stylesheet" type="text/css" href="assets/style.css">  
         <link href="assets/fullcalendar.min.css" rel='stylesheet' media='print' />
         <link href='assets/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+
  
-       
         <!--Link to googlefonts -->
      <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <!--Link for calendar css-->
-   <link rel='stylesheet' type='text/css' href='assets/fullcalendar.css' />
+   <link rel='stylesheet' type='text/css' href='assets/calendar/lib/fullcalendar.css' />
  
    <!-- Jquery and Javascript -->
-   <script src='assets/lib/moment.min.js'></script>
-   <script src='assets/lib/jquery.min.js'></script>
-   <script src='assets/fullcalendar.min.js'></script>
+   <script src='assets/calendar/lib/moment.min.js'></script>
+   <script src='assets/calendar/lib/jquery.min.js'></script>
+   <script src='assets/calendar/lib/fullcalendar.min.js'></script>
    <script type='text/javascript' src='assets/jquery.js'></script>
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type='text/javascript' src='assets/fullcalendar.js'></script>
+  <script type='text/javascript' src='assets/calendar/fullcalendar.js'></script>
    
     <!--Link to googlefonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -74,7 +74,7 @@
                 How are doing today?
             </div>
             <br>
-            <form>
+        <form class="gifSubmit">
                 <div class="form-group">
                     <input type="text" class="form-control" id="emotion-input"  placeholder="happy">
                 </div>
@@ -95,10 +95,17 @@
                     <label for="jounal">Journal your thoughts here:</label>
                     <textarea class="form-control" id="journal-input" rows="5" placeholder="Today I feel.."></textarea>
                   </div>
-                </div>
+            </div>
             </form>
             <br>
             <button id="modalsubmit">Submit</button>
+        </div>
+                
+        <!--end of modal div-->
+        </div>
+        <!-- gifResults div for posting daily giph -->
+        <div id="gifs-appear-here"></div>
+       
         </div>
              <!--end of modal div-->
         <!-- Quote insert -->
@@ -106,7 +113,7 @@
         </div>
     <div id="gifs-appear-here"></div>      
         <!-- ToDo list -->
-       
+      
         <div id='todo'>insert todo list here
         </div>  
     
@@ -116,6 +123,11 @@
     <script src="assets/main.js"></script>
     <script src="assets/entries.js"></script>
 
+
+
+
+    <!-- Optional JavaScript -->
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>   
@@ -124,8 +136,9 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
    
           <!-- Optional JavaScript -->
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js" />
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css"/>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.css"/>
-</body>  
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.css">
+          <script src="assets/main.js"></script>
+</body>
 </html>

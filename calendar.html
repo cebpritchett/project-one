@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <!--Meta Tags-->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
 
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+<!--Import materialize.css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
 
-    <!--Linking Local CSS-->
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css" />
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
+<!--Linking Local CSS-->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css"></link>
+    <link rel="stylesheet" type="text/css" href="assets/style.css"></link>  
+    <link href="assets/calendar/lib/fullcalendar.min.css' rel='stylesheet' media='print'"></link>
+    <link href='assets/calendar/lib/fullcalendar.print.min.css' rel='stylesheet' media='print'><link>
 
-    <!-- Plotly.js -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <!-- Numeric JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
-
-    <!--Full Calendar -->
-    <link href="assets/fullcalendar.css" rel="stylesheet">
-    <link href="assets/fullcalendar.print.css" rel="stylesheet" media="print">
    
+    <!--Link to googlefonts -->
+ <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<!--Link for calendar css-->
+<link rel='stylesheet' type='text/css' href='assets/calendar/lib/fullcalendar.css' />
+
+<!-- Jquery and Javascript -->
+<script src='assets/calendar/lib/moment.min.js'></script>
+<script src='assets/calendar/lib/jquery.min.js'></script>
+<script src='assets/calendar/lib/fullcalendar.min.js'></script>
+<script type='text/javascript' src='assets/jquery.js'></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type='text/javascript' src='assets/calendar/fullcalendar.js'></script>
 
 
+<!--Link to googlefonts -->
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
-    <!--Page Title-->
-    <title>Me Mood Stats</title>
+ 
+    <!--Link to googlefonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
+   
 </head>
-
 
 <body>
     <header>
@@ -40,47 +49,65 @@
         <div class="jumbotron">
             <h1 class="display-4">Me Mood</h1>
             <br>
-            <p class="lead">CALENDAR PAGE</p>
+            <p class="lead">Calendar</p>
             <br>
             <br>
-
-
-    <!--Nav Bar -->
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="calendar.html">Calendar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="entries.html">Entries</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="stats.html">Stats</a>
-                </li>
-            </ul>
+        <!--Nav Bar -->
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="calendar.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="entries.html">Entries</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="stats.html">Stats</a>
+            </li>
+        </ul>
     </header>
 
-
-        <div class="calendar" class"fc fc-unthemed fc-ltr">
-            <div class= "fc-toolbar"></div>
-             <div class="fc-left"></div>
-            <div class="fc-right"></div>
-            <div class="fc-center"></div>
-            <div class="fc-clear"></div>
-          </div>
         
-            <div class="fc-view-container" style>
-                <div class="fc-view fc-month-view fc-basic-view" style></div>
-            </div>
+             
+     <!--****************  ToDo list  **************** -->
+     <div id='calendar'>   </div>  
+
+
+<!-- ************** end of Todo-List ****************************//  -->
 
 
 
-            <script src="assets/fullcalendar.js"></script>
-            <script src="assets/lib/moment.min.js"></script>
-            <script src="assets/lib/jquery.min.js"></script>
-            <script src="assets/fullcalendar.min.js"></script>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
     
-    </body>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    
+        
+           <!-- Optional JavaScript -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+           <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
+           <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.css">
+
+              <script src='assets/calendar/calendar.js'></script>
+          <script src='assets/calendar/fullcalendar.js'></script>
+          <script src='assets/calendar/lib/moment.js'></script>
+          <script src='asseets/jquery.js'></script>
+        <script src='assets/calendar/scheduler.js'></script>
+
+
+           <script src="assets/calendar/calendar.js"></script>
+</body>
 </html>
