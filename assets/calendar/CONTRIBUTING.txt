@@ -11,9 +11,13 @@ Please search the [Issue Tracker] to see if your feature has already been reques
 
 ## Contributing Features
 
+<<<<<<< HEAD
+Each new feature should be designed as robustly as possible and be useful beyond the immediate usecase it was initially designed for. Feel free to start a ticket discussing the feature's specs before coding.
+=======
 The FullCalendar project welcomes [Pull Requests][Using Pull Requests] for new features, but because there are so many feature requests (over 100), and because every new feature requires refinement and maintenance, each PR will be prioritized against the project's other demands and might take a while to make it to an official release.
 
 Furthermore, each new feature should be designed as robustly as possible and be useful beyond the immediate usecase it was initially designed for. Feel free to start a ticket discussing the feature's specs before coding.
+>>>>>>> f9539d37d3dc6ce5c76eb7d515604b724b184b35
 
 
 ## Contributing Bugfixes
@@ -21,16 +25,21 @@ Furthermore, each new feature should be designed as robustly as possible and be 
 In the description of your [Pull Request][Using Pull Requests], please include recreation steps for the bug as well as a [JSFiddle/JSBin] demo. Communicating the buggy behavior is a requirement before a merge can happen.
 
 
+<<<<<<< HEAD
+=======
 ## Contributing Locales
 
 Please edit the original files in the `locale/` directory. DO NOT edit anything in the `dist/` directory. The build system will responsible for merging FullCalendar's `locale/` data with the [MomentJS locale data].
 
 
+>>>>>>> f9539d37d3dc6ce5c76eb7d515604b724b184b35
 ## Other Ways to Contribute
 
 [Read about other ways to contribute &raquo;](http://fullcalendar.io/wiki/Contributing/)
 
 
+<<<<<<< HEAD
+=======
 ## Getting Set Up
 
 You will need [Git][git], [Node][node], and NPM installed. For clarification, please view the [jQuery readme][jq-readme], which requires a similar setup.
@@ -49,11 +58,17 @@ Enter the directory and install FullCalendar's dependencies:
 	npm install
 
 
+>>>>>>> f9539d37d3dc6ce5c76eb7d515604b724b184b35
 ## What to edit
 
 When modifying files, please do not edit the generated or minified files in the `dist/` directory. Please edit the original `src/` files.
 
 
+<<<<<<< HEAD
+[Codepen/JSFiddle]: http://fullcalendar.io/wiki/Reporting-Bugs/
+[Issue Tracker]: https://github.com/fullcalendar/fullcalendar-scheduler/issues
+[Using Pull Requests]: https://help.github.com/articles/using-pull-requests/
+=======
 ## Development Workflow
 
 After you make code changes, you'll want to compile the JS/CSS so that it can be previewed from the tests and demos. You can either manually rebuild each time you make a change:
@@ -125,3 +140,4 @@ If you have edited code (including **tests** and **translations**) and would lik
 [jq-readme]: https://github.com/jquery/jquery/blob/master/README.md#what-you-need-to-build-your-own-jquery
 [Google JavaScript Style Guide]: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
 [Automated Test Readme]: https://github.com/fullcalendar/fullcalendar/wiki/Automated-Tests
+>>>>>>> f9539d37d3dc6ce5c76eb7d515604b724b184b35

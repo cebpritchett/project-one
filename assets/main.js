@@ -32,7 +32,7 @@ $(document).ready(function () {
       var emotion = $("#emotion-input").val().trim();
       var stat = $("#stat").val();
       var journal = $("#journal-input").val().trim();
-    console.log(stat);
+
       //create temporary object to stor input of user data
       var newMood ={ 
         date: date,
@@ -77,6 +77,7 @@ $(document).ready(function () {
           }
       });
   });
+
 
 
 });
@@ -157,32 +158,28 @@ var layout = {
 //DO NOT DELETE
 //Plotly.newPlot("myDiv", data, layout);
 
+
 //*********************End Chart Input*************************** 
 
 // To-do List Main Page //
-  $(document).ready(function(){
+ 
+$(function() {
+  $('#calendar').fullCalendar({ 
+    defaultView: 'listWeek',
 
-      $(function() {
-          $("calendar").fullCalendar({
-            defaultView: "listWeek",
-        
-            // customize the button names,
-            // otherwise they'd all just say "list"
-            views: {
-              listDay: { buttonText: "list day" },
-              listWeek: { buttonText: "list week" },
-              listMonth: { buttonText: "list month" }
-                   },
-        
-            header: {
-              left: "title",
-              center: "",
-              right: "listDay,listWeek,listMonth"
-                    },
-            events: "https://fullcalendar.io/demo-events.json"
-                                       });
-        });
-      });
-        
-//END OF DO NOT DELETE
-           
+    // customize the button names,
+    // otherwise they'd all just say "list"
+    views: {
+      listDay: { buttonText: 'list day' },
+      listWeek: { buttonText: 'list week' },
+      listMonth: { buttonText: 'list month' }
+    },
+
+    header: {
+      left: 'title',
+      center: '',
+      right: 'listDay,listWeek,listMonth'
+    },
+    events: 'https://fullcalendar.io/demo-events.json'
+  })
+});
