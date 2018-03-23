@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+
+For complete licensing information, visit:
+http://fullcalendar.io/scheduler/license/
+
+FullCalendar Scheduler is tri-licensed, meaning you must choose
+one of three licenses to use. Here is a summary of those licenses:
+
+- Commercial License
+  (a paid license, meant for commercial use)
+  http://fullcalendar.io/scheduler/license-details/
+
+- Creative Commons Non-Commercial No-Derivatives
+  (meant for trial and non-commercial use)
+  https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+- GPLv3 License
+  (meant for open-source projects)
+  http://www.gnu.org/licenses/gpl-3.0.en.html
+=======
 Copyright (c) 2015 Adam Shaw
 
 Permission is hereby granted, free of charge, to any person obtaining
@@ -18,3 +38,4 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+>>>>>>> f9539d37d3dc6ce5c76eb7d515604b724b184b35
