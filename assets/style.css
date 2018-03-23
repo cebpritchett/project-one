@@ -30,9 +30,13 @@ body {
 }
 
 #calendar {
-    max-width: 900px;
-    margin: 40px auto;
-    border: 2px, black;
+    text-align: center;
+    padding: 1%;
+    border: 2px solid #F8E3BC;
+    background-color: #1D1941;
+    color: #F8E3BC;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #modal1 {
@@ -69,8 +73,7 @@ label {
 }
 
 #calendar {
-    max-width: 900px;
-    margin: 40px auto;
+   
 }
 #modal1 {
     text-align: center;
@@ -176,13 +179,4 @@ label {
     border-color: black;
     color: #1D1941;
     text-align: center;
-}
-#gifs-appear-here {
-    text-align: center;
-    float: left;
-    padding: 1%;
-    border: 2px solid #DE9B84;
-    margin-left: 10%;
-    background-color: #F8E3BC;
-    color: #1D1941;
 }

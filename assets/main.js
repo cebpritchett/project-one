@@ -15,14 +15,14 @@ firebase.initializeApp(config);
 $(document).ready(function () {
   //hide hider and popup_box
   $("#modal1").show();
-  $('.calendar').hide();
+  $('#calendar').hide();
   $('#quote').hide();
   $("#todo").hide();
   $("#gifs-appear-here").hide();
   //on click hide the message and the
   $("#modalsubmit").click(function () {
       $("#modal1").hide();
-      $('.calendar').show();
+      $('#calendar').show();
       $('#quote').show();
       $("#todo").show();
     $("#gifs-appear-here").show();
