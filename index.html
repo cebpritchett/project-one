@@ -13,17 +13,12 @@
         crossorigin="anonymous">
   
     <!--Linking Local CSS-->
-        <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css"></link>
-        <link rel="stylesheet" type="text/css" href="assets/style.css"></link>  
-<<<<<<< HEAD
-        <link href="assets/calendar/lib/fullcalendar.min.css' rel='stylesheet' media='print'"></link>
-        <link href='assets/calendar/lib/fullcalendar.print.min.css' rel='stylesheet' media='print'><link>
-=======
-        <link href="assets/fullcalendar.min.css' rel='stylesheet' media='print'"></link>
-        <link href='assets/fullcalendar.print.min.css' rel='stylesheet' media='print'><link>
->>>>>>> develop
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css" />
+        <link rel="stylesheet" type="text/css" href="assets/style.css">  
+        <link href="assets/fullcalendar.min.css" rel='stylesheet' media='print' />
+        <link href='assets/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+
  
-       
         <!--Link to googlefonts -->
      <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <!--Link for calendar css-->
@@ -37,10 +32,9 @@
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type='text/javascript' src='assets/calendar/fullcalendar.js'></script>
    
-
     <!--Link to googlefonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <!--Page Title-->
 
         <title>Me Mood Home</title>
@@ -85,9 +79,10 @@
                     <input type="text" class="form-control" id="emotion-input"  placeholder="happy">
                 </div>
                 <br>
+            <div class="gifSubmit">    
                 <div class="form-group">
                     <label for="moodlevel">Rate your mood from 1 (worst mood) to 5 (best mood)</label>
-                    <select class="form-control">
+                    <select class="form-control" id="stat">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -100,11 +95,11 @@
                     <label for="jounal">Journal your thoughts here:</label>
                     <textarea class="form-control" id="journal-input" rows="5" placeholder="Today I feel.."></textarea>
                   </div>
-                  <button type="submit" id="modalsubmit">Submit</button>
+            </div>
             </form>
             <br>
-            
-            
+            <button id="modalsubmit">Submit</button>
+        </div>
                 
         <!--end of modal div-->
         </div>
@@ -113,22 +108,20 @@
        
         </div>
              <!--end of modal div-->
-
-             
-        <!-- ToDo list -->
-       
-        <div id='calendar'>   </div>  
-
-        
-     <!-- Quote insert -->
-
+        <!-- Quote insert -->
         <div id='quote'> insert quote here
-
-
-
-
-              </div>
-                    
+        </div>
+    <div id="gifs-appear-here"></div>      
+        <!-- ToDo list -->
+      
+        <div id='todo'>insert todo list here
+        </div>  
+    
+    
+             
+    <!-- Optional JavaScript -->
+    <script src="assets/main.js"></script>
+    <script src="assets/entries.js"></script>
 
 
 
@@ -136,12 +129,12 @@
     <!-- Optional JavaScript -->
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>   
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   
           <!-- Optional JavaScript -->
           <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
           <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
