@@ -30,9 +30,13 @@ body {
 }
 
 #calendar {
-    max-width: 900px;
-    margin: 40px auto;
-    border: 2px, black;
+    text-align: center;
+    padding: 1%;
+    border: 2px solid #F8E3BC;
+    background-color: #1D1941;
+    color: #F8E3BC;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #modal1 {
@@ -68,8 +72,9 @@ label {
 
 }
 
-
-
+#calendar {
+   
+}
 #modal1 {
     text-align: center;
     padding-top: 2%;
@@ -106,17 +111,14 @@ label {
 a:hover { 
     color: #F8E3BC;
 }
-<<<<<<< HEAD
 
-
-=======
 .calendar {
     padding-top: 2%;
     padding-bottom: 2%;
     text-align: center;
     margin: auto;
 }
->>>>>>> develop
+
 #modal1 {
     text-align: center;
     padding-top: 2%;
@@ -154,23 +156,27 @@ label {
     background-color: #DE9B84;
     color: #1D1941;
     border: 2px, black;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
     text-align: center;
 }
 .entries {
-    background-color: #DE9B84;
-    color: #1D1941;
-    border: 2px, black;
-    margin-left: 15%;
-    margin-right: 15%;
     text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F8E3BC;
+    color: #1D1941;
 }
 
-#myDivPie {
-    margin-left: 28%;
-    margin-right: 28%;
-    background-color: #DE9B84;
+#myDivLine {
+    margin-top: 0%;
+    margin-left: auto;
+    margin-right:auto;
+    width:50%;
+    border-color: black;
     color: #1D1941;
     text-align: center;
 }
