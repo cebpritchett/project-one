@@ -52,21 +52,23 @@
             <p class="lead">HOME</p>
             <br>
             <br>
-            <!--Nav Bar -->
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="calendar.html">Calendar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="entries.html">Entries</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="stats.html">Stats</a>
-                </li>
-            </ul>
+
+        <!--Nav Bar -->
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="calendar.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="entries.html">Entries</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="stats.html">Stats</a>
+            </li>
+        </ul>
+
     </header>
 
     <!--Modal-->
@@ -76,10 +78,11 @@
         </div>
         <br>
         <form class="gifSubmit">
-            <div class="form-group">
-                <input type="text" class="form-control" id="emotion-input" placeholder="happy">
-            </div>
-            <br>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="emotion-input"  placeholder="happy">
+                </div>
+                <br>
+            <div class="gifSubmit">    
             <div class="gifSubmit">
                 <div class="form-group">
                     <label for="moodlevel">Rate your mood from 1 (worst mood) to 5 (best mood)</label>
@@ -95,36 +98,27 @@
                 <div class="form-group">
                     <label for="jounal">Journal your thoughts here:</label>
                     <textarea class="form-control" id="journal-input" rows="5" placeholder="Today I feel.."></textarea>
-                </div>
+                  </div>
             </div>
-        </form>
-        <br>
-        <button id="modalsubmit">Submit</button>
-    </div>
-
-    <!--end of modal div-->
-    </div>
-    <!-- gifResults div for posting daily giph -->
-    <div id="gifs-appear-here"></div>
-
-    </div>
-    <br>
-    <!--end of modal div-->
-    <!-- Quote insert -->
-    <div id='quote'> insert quote here
-    </div>
-
-    <!-- ToDo list -->
-
-    <div id='calendar'>
-    </div>
 
 
+            </form>
+            <br>
+            <!--<button id="modalsubmit">Submit</button> -->
+            <a href="home.html" class="btn btn-default" id="modalsubmit">Submit</a>
 
+        </div>
+                
+        <!--end of modal div-->
+        </div>
+        <footer>
+            <p id="foottext">Copyright © 2018 MeMood</p>
+        </footer>
     <!-- Optional JavaScript -->
     <script src="assets/main.js"></script>
     <script src="assets/entries.js"></script>
-
+    <script src="assets/quote.js"></script>
+ 
     <script src='assets/fullcalendar.js'></script>
     <script src='assets/calendar/lib/moment.js'></script>
     <script src='assets/calendar/lib/scheduler.js'></script>
