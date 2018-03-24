@@ -70,6 +70,8 @@ $(document).ready(function() {
       moodInput +
       "&api_key=H8YEjrprBP114UoKPFK4mv1xKW8sKR6o";
 
+    randGif = Math.floor(Math.random() * 25);
+
     // AJAX call to giphy API
     $.ajax({
       url: giphyURL,
@@ -77,14 +79,16 @@ $(document).ready(function() {
     }).then(function(response) {
       var results = response.data;
       for (var i = 0; i < 1; i++) {
-        var obj = results[i];
+        var obj = results[randGif];
         var gifDiv = $("<div class='gif-results'>");
         var gifImage = $("<img>");
         gifImage.attr("src", obj.images.fixed_height.url);
         gifDiv.append(gifImage);
         $("#gifs-appear-here").prepend(gifDiv);
+        $('form').hide();
       }
     });
+    
   });
 });
 

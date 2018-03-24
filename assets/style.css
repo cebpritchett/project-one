@@ -39,6 +39,16 @@ body {
     margin-right: 5%;
 }
 
+#gifs-appear-here {
+    text-align: center;
+    padding: 1%;
+    border: 2px solid #F8E3BC;
+    background-color: #1D1941;
+    color: #F8E3BC;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 #modal1 {
     text-align: center;
     padding-top: 2%;
@@ -76,7 +86,7 @@ label {
     padding-bottom: 1%;
 }
 
-#calendar {}
+/*#calendar {}*/
 
 #modal1 {
     text-align: center;

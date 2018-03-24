@@ -1,4 +1,4 @@
-var loadquote = function() {
+/*var loadquote = function() {
   $.ajax({
     type: "GET",
     url:
@@ -19,4 +19,28 @@ var loadquote = function() {
       );
     }
   });
-};
+};*/
+$(document).ready(function(){
+    var quoteURL = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1"
+$('form').submit(function(e) {
+    e.preventDefault();
+    $.ajax( {
+      url: quoteURL,
+      success: function(data) {
+        console.log(data);
+      
+        var post = data.shift(); // The data is an array of posts. Grab the first one.
+        $('#quote-content').text(post.content);
+        $('#quote-title').html(post.title);
+
+        // If the Source is available, use it. Otherwise hide it.
+        if (typeof post.custom_meta !== 'undefined' && typeof post.custom_meta.Source !== 'undefined') {
+          $('#quote-source').html('Source:' + post.custom_meta.Source);
+        } else {
+          $('#quote-source').text('');
+        }
+      },
+      cache: false
+    });
+  }); 
+});
