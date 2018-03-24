@@ -1,6 +1,3 @@
-
-
-    
     var config = {
     apiKey: "AIzaSyAKJlo_j-vzp3V41tJo79yafU1xxSIo2Qk",
     authDomain: "me-mood.firebaseapp.com",
