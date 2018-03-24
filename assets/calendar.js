@@ -4,7 +4,7 @@ $(function() {
     themeSystem: 'bootstrap4',
       defaultView: 'month',
       header: {
-        left: ' addEventButton,prev, next today',
+        left: 'addEventButton,prev, next today',
         center: 'title',
         right: 'month,agendaWeek,agendaDay,listYear',
     
