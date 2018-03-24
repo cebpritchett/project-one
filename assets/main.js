@@ -13,19 +13,18 @@ firebase.initializeApp(config);
             //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
             //var horoscopeSign = "";
 $(document).ready(function () {
-  //hide hider and popup_box
-  $("#modal1").show();
-  $('#calendar').hide();
-  $('#quote').hide();
-  $("#todo").hide();
-  $("#gifs-appear-here").hide();
+  //$("#modal1").show();
+  //$('#calendar').hide();
+  //$('#quote').hide();
+  //$("#todo").hide();
+  //$("#gifs-appear-here").hide();
   //on click hide the message and the
   $("#modalsubmit").click(function () {
-      $("#modal1").hide();
-      $('#calendar').show();
-      $('#quote').show();
-      $("#todo").show();
-    $("#gifs-appear-here").show();
+      //$("#modal1").hide();
+      //$('#calendar').show();
+      //$('#quote').show();
+      //$("#todo").show();
+    //$("#gifs-appear-here").show();
 
       //set variables for user input
       var date = moment().format('L');
@@ -44,7 +43,13 @@ $(document).ready(function () {
       //push to firebase database
       
       database.ref().push(newMood);
-
+      database.ref().on("child_added", function(childSnapshot, prevChildKey){
+  
+        //store snapshot data into variable
+          var tdate = childSnapshot.val().date;
+          var temotion = childSnapshot.val().emotion;
+          var tstat = childSnapshot.val().rating;
+          var tjournal = childSnapshot.val().journal;
       //clear out the form text boxes after submit is pressed
       //$("#emotion-input").val("");
       //$("#journal-input").val("");
@@ -57,7 +62,9 @@ $(document).ready(function () {
 //$("form").submit(function (event) {
      // event.preventDefault();
       
-      var moodInput = $("#emotion-input").val().trim();
+      var moodInput = temotion;
+      console.log(temotion);
+      console.log(moodInput);
       var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + moodInput + "&api_key=H8YEjrprBP114UoKPFK4mv1xKW8sKR6o";
 
       // AJAX call to giphy API
@@ -74,6 +81,7 @@ $(document).ready(function () {
               gifDiv.append(gifImage);
               $("#gifs-appear-here").prepend(gifDiv);
           }
+        });
       });
   });
 
@@ -163,7 +171,7 @@ var layout = {
 // To-do List Main Page //
  
 $(function() {
-  $('#calendar').fullCalendar({ 
+  $('#todo').fullCalendar({ 
     defaultView: 'listWeek',
 
     // customize the button names,

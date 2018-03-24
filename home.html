@@ -68,48 +68,26 @@
         </ul>
     </header>
 
-        <!--Modal-->
-        <div id="modal1">
-            <div id="modalheader">
-                How are doing today?
+        <div class="row" id="main">
+            <!-- gifResults div for posting daily giph -->
+            <div id="gifs-appear-here"></div>
+           
+            <!-- Quote insert -->
+            <div id='quote'> 
             </div>
-            <br>
-        <form class="gifSubmit">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="emotion-input"  placeholder="happy">
-                </div>
-                <br>
-            <div class="gifSubmit">    
-                <div class="form-group">
-                    <label for="moodlevel">Rate your mood from 1 (worst mood) to 5 (best mood)</label>
-                    <select class="form-control" id="stat">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                      </select>
-                  </div>
-                  <br>
-                <div class="form-group">
-                    <label for="jounal">Journal your thoughts here:</label>
-                    <textarea class="form-control" id="journal-input" rows="5" placeholder="Today I feel.."></textarea>
-                  </div>
-            </div>
-            </form>
-            <br>
-            <!--<button id="modalsubmit">Submit</button> -->
-            <a href="home.html" class="btn btn-default" id="modalsubmit">Submit</a>
+        </div> 
+        <!-- ToDo list -->
+        <h1>My To Do List:</h1>
+        <div id='todo'>
+            
+      
         </div>
-                
-        <!--end of modal div-->
-        </div>
-  
     
              
     <!-- Optional JavaScript -->
     <script src="assets/main.js"></script>
     <script src="assets/entries.js"></script>
+    <script src="assets/giphy.js"></script>
  
     <script src='assets/fullcalendar.js'></script>
     <script src='assets/calendar/lib/moment.js'></script>

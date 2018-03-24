@@ -15,7 +15,17 @@ body {
      background-size: cover;
      font-family: 'Quicksand', sans-serif;
 }
-
+h1 {
+   font-weight: 900;
+   padding-bottom: 1%;
+   font-size: 30px;
+   text-align: center;
+   text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0  white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
 .jumbotron {
     background-color: #1D1941;
     color: #F8E3BC;
@@ -31,12 +41,13 @@ body {
 
 #calendar {
     text-align: center;
+    width: 80%;
     padding: 1%;
     border: 2px solid #F8E3BC;
     background-color: #1D1941;
     color: #F8E3BC;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #modal1 {
@@ -72,9 +83,7 @@ label {
 
 }
 
-#calendar {
-   
-}
+
 #modal1 {
     text-align: center;
     padding-top: 2%;
@@ -109,14 +118,15 @@ label {
 }
 
 a:hover { 
-    color: #F8E3BC;
+    color: #DE9B84;
 }
 
 .calendar {
     padding-top: 2%;
     padding-bottom: 2%;
     text-align: center;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #modal1 {
@@ -156,18 +166,20 @@ label {
     background-color: #DE9B84;
     color: #1D1941;
     border: 2px, black;
-    margin-left: 10%;
-    margin-right: 10%;
     text-align: center;
+    float: left;
+    width: 59%;
+    border-left: 2px solid #1D1941;
+    
 }
 .entries {
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
-    width: 50%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #F8E3BC;
+    background-color: #DE9B84;
     color: #1D1941;
 }
 
@@ -179,4 +191,25 @@ label {
     border-color: black;
     color: #1D1941;
     text-align: center;
+}
+#gifs-appear-here {
+    float: left;
+    padding: 1%;
+    width: 40%;
+    margin-right: 1%;
+}
+#main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F8E3BC;
+    border: 2px solid #1D1941;
+    margin-bottom: 2%;
+}
+#todo {
+    background-color: #1D1941;
+    color: #DE9B84;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
