@@ -9,25 +9,16 @@ var config = {
   //end of firebase function
 };
 firebase.initializeApp(config);
-var database = firebase.database();
-//var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
-//var horoscopeSign = "";
-$(document).ready(function() {
-  //hide hider and popup_box
-  $("#modal1").show();
-  $("#calendar").hide();
-  $("#quote").hide();
-  $("#todo").hide();
-  $("#gifs-appear-here").hide();
-  //on click hide the message and the
-  $("#modalsubmit").click(function(event) {
-    event.preventDefault();
-    $("#modal1").hide();
-    $("#calendar").show();
-    $("#quote").show();
-    $("#todo").show();
-    $("#gifs-appear-here").show();
 
+  var database = firebase.database();
+            //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
+            //var horoscopeSign = "";
+$(document).ready(function () {
+  
+  //on click hide the message and the
+  
+  $("#modalsubmit").click(function () {
+      
     //set variables for user input
     var date = moment().format("L");
     var emotion = $("#emotion-input")
@@ -45,54 +36,52 @@ $(document).ready(function() {
       rating: stat
       //end of new object entry
     };
-
-    //push to firebase database
-
-    database.ref().push(newMood);
-
-    //clear out the form text boxes after submit is pressed
-    //$("#emotion-input").val("");
-    //$("#journal-input").val("");
-
-    //end of modal fadout function
-    //});
-
-    //Form submit funtion for first modal
-    
       
-     
+      //push to firebase database
+      
+      database.ref().push(newMood);
+      database.ref().on("child_added", function(childSnapshot, prevChildKey){
+  
+        //store snapshot data into variable
+          var tdate = childSnapshot.val().date;
+          var temotion = childSnapshot.val().emotion;
+          var tstat = childSnapshot.val().rating;
+          var tjournal = childSnapshot.val().journal;
+      //clear out the form text boxes after submit is pressed
+      //$("#emotion-input").val("");
+      //$("#journal-input").val("");
 
-    //$("form").submit(function (event) {
-    // event.preventDefault();
+      //end of modal fadout function
+  //});
 
-    var moodInput = $("#emotion-input")
-      .val()
-      .trim();
-    var giphyURL =
-      "https://api.giphy.com/v1/gifs/search?q=" +
-      moodInput +
-      "&api_key=H8YEjrprBP114UoKPFK4mv1xKW8sKR6o";
-    // generate number to select random gif from array
-    randGif = Math.floor(Math.random() * 25);
+  //Form submit funtion for first modal
 
-    // AJAX call to giphy API
-    $.ajax({
-      url: giphyURL,
-      method: "GET"
-    }).then(function(response) {
-      var results = response.data;
-      console.log(results);
-      for (var i = 0; i < 1; i++) {
-        var obj = results[randGif];
-        var gifDiv = $("<div class='gif-results'>");
-        var gifImage = $("<img>");
-        gifImage.attr("src", obj.images.fixed_height.url);
-        gifDiv.append(gifImage);
-        $("#gifs-appear-here").prepend(gifDiv);
-        $('form').hide();
-      }
-    });
-    
+//$("form").submit(function (event) {
+     // event.preventDefault();
+      
+      var moodInput = temotion;
+      console.log(temotion);
+      console.log(moodInput);
+      var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + moodInput + "&api_key=H8YEjrprBP114UoKPFK4mv1xKW8sKR6o";
+
+      // AJAX call to giphy API
+      $.ajax({
+          url: giphyURL,
+          method: "GET"
+      }).then(function (response) {
+          var results = response.data;
+          for (var i = 0; i < 1; i++) {
+              var obj = results[i];
+              var gifDiv = $("<div class='gif-results'>");
+              var gifImage = $("<img>");
+              gifImage.attr("src", obj.images.fixed_height.url);
+              gifDiv.append(gifImage);
+              $("#gifs-appear-here").prepend(gifDiv);
+          }
+        });
+      });
+
+
   });
 });
 
@@ -177,8 +166,10 @@ var layout = {
 // To-do List Main Page //
 
 $(function() {
-  $("#calendar").fullCalendar({
-    defaultView: "listWeek",
+
+  $('#todo').fullCalendar({ 
+    defaultView: 'listWeek',
+
 
     // customize the button names,
     // otherwise they'd all just say "list"

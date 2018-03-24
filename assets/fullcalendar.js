@@ -694,7 +694,7 @@ function mergeProps(propObjs, complexProps) {
                 if (typeof val === 'object') {
                     complexObjs.unshift(val);
                 }
-                else if (val !== undefined) {
+                else if (val !==   {
                     dest[name] = val; // if there were no objects, this value will be used
                     break;
                 }
@@ -793,7 +793,7 @@ function firstDefined() {
         args[_i] = arguments[_i];
     }
     for (var i = 0; i < args.length; i++) {
-        if (args[i] !== undefined) {
+        if (args[i] !== ) {
             return args[i];
         }
     }
@@ -1311,7 +1311,7 @@ function makeMoment(args, parseAsUTC, parseZone) {
     var isAmbigZone;
     var ambigMatch;
     var mom;
-    if (moment.isMoment(input) || util_1.isNativeDate(input) || input === undefined) {
+    if (moment.isMoment(input) || util_1.isNativeDate(input) || input === ) {
         mom = moment.apply(null, args);
     }
     else {
@@ -3631,7 +3631,7 @@ var View = /** @class */ (function (_super) {
     // -----------------------------------------------------------------------------------------------------------------
     View.prototype.setDate = function (date) {
         var currentDateProfile = this.get('dateProfile');
-        var newDateProfile = this.dateProfileGenerator.build(date, undefined, true); // forceToValid=true
+        var newDateProfile = this.dateProfileGenerator.build(date, true); // forceToValid=true
         if (!currentDateProfile ||
             !currentDateProfile.activeUnzonedRange.equals(newDateProfile.activeUnzonedRange)) {
             this.set('dateProfile', newDateProfile);
@@ -4960,7 +4960,7 @@ var Model = /** @class */ (function (_super) {
         var newProps;
         if (typeof name === 'string') {
             newProps = {};
-            newProps[name] = val === undefined ? null : val;
+            newProps[name] = val ===  ? null : val;
         }
         else {
             newProps = name;
@@ -4972,7 +4972,7 @@ var Model = /** @class */ (function (_super) {
         var changeset = {}; // will have undefined's to signal unsets
         var name;
         for (name in oldProps) {
-            changeset[name] = undefined;
+            changeset[name] = ;
         }
         for (name in newProps) {
             changeset[name] = newProps[name];
@@ -4990,7 +4990,7 @@ var Model = /** @class */ (function (_super) {
             names = name;
         }
         for (i = 0; i < names.length; i++) {
-            newProps[names[i]] = undefined;
+            newProps[names[i]] = ;
         }
         this.setProps(newProps);
     };
@@ -5019,7 +5019,7 @@ var Model = /** @class */ (function (_super) {
             }
             for (name in changedProps) {
                 val = changedProps[name];
-                if (val === undefined) {
+                if (val === ) {
                     delete this._props[name];
                 }
                 else {
@@ -5078,16 +5078,16 @@ var Model = /** @class */ (function (_super) {
             }
         };
         var onDepChange = function (depName, val, isOptional) {
-            if (val === undefined) {
+            if (val === ) {
                 // required dependency that was previously set?
-                if (!isOptional && values[depName] !== undefined) {
+                if (!isOptional && values[depName] !==  {
                     satisfyCnt--;
                 }
                 delete values[depName];
             }
             else {
                 // required dependency that was previously unset?
-                if (!isOptional && values[depName] === undefined) {
+                if (!isOptional && values[depName] === ) {
                     satisfyCnt++;
                 }
                 values[depName] = val;
@@ -7467,7 +7467,7 @@ var BasicView = /** @class */ (function (_super) {
         return { top: this.scroller.getScrollTop() };
     };
     BasicView.prototype.applyDateScroll = function (scroll) {
-        if (scroll.top !== undefined) {
+        if (scroll.top !== ) {
             this.scroller.setScrollTop(scroll.top);
         }
     };
@@ -9362,7 +9362,7 @@ var Calendar = /** @class */ (function () {
     Calendar.prototype.option = function (name, value) {
         var newOptionHash;
         if (typeof name === 'string') {
-            if (value === undefined) {
+            if (value === ) {
                 return this.optionsManager.get(name);
             }
             else {
@@ -11496,7 +11496,7 @@ var AgendaView = /** @class */ (function (_super) {
         return { top: this.scroller.getScrollTop() };
     };
     AgendaView.prototype.applyDateScroll = function (scroll) {
-        if (scroll.top !== undefined) {
+        if (scroll.top !== ) {
             this.scroller.setScrollTop(scroll.top);
         }
     };
@@ -13880,7 +13880,7 @@ var TimeGridEventRenderer = /** @class */ (function (_super) {
     TimeGridEventRenderer.prototype.computeFgSegForwardBack = function (seg, seriesBackwardPressure, seriesBackwardCoord) {
         var forwardSegs = seg.forwardSegs;
         var i;
-        if (seg.forwardCoord === undefined) {
+        if (seg.forwardCoord === ) {
             if (!forwardSegs.length) {
                 // if there are no forward segments, this segment should butt up against the edge
                 seg.forwardCoord = 1;
@@ -14010,7 +14010,7 @@ function computeSlotSegPressures(seg) {
     var forwardPressure = 0;
     var i;
     var forwardSeg;
-    if (seg.forwardPressure === undefined) {
+    if (seg.forwardPressure === ) {
         for (i = 0; i < forwardSegs.length; i++) {
             forwardSeg = forwardSegs[i];
             // figure out the child's maximum forward path
@@ -14215,10 +14215,10 @@ var Popover = /** @class */ (function () {
         var left; //
         // compute top and left
         top = options.top || 0;
-        if (options.left !== undefined) {
+        if (options.left !== ) {
             left = options.left;
         }
-        else if (options.right !== undefined) {
+        else if (options.right !== ) {
             left = options.right - width; // derive the left value from the right value
         }
         else {
