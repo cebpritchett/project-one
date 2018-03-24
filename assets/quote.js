@@ -1,18 +1,32 @@
+
 $(document).ready(function(){
-    $.ajax({
-        url: 'http://api.adviceslip.com/advice',
-        dataType: 'json',
-        success: function (response) {
-            console.log('success', response);
-            advice = response.slip.advice;
-            $('#quote').text('"'+advice+'"');
-            if (response.author) {
-                $('#author').text('- ' + response.author);
-            } else {
-                $('#author').text('- unkown');
+    function getNewQuote(){
+        $.ajax({
+            url: "https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en",
+            jsonp: "jsonp",
+            dataType : "jsonp",
+          
+            success: function(response) {
+                $("#quote").html(response.quoteText);
+                
+      
             }
-        }
-    });
+        })
+
+    };
+
+    getNewQuote();
+
 });
+        
+
+
+
+
+
+
+
+
+
     
    
