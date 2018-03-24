@@ -63,8 +63,7 @@ $(document).ready(function () {
      // event.preventDefault();
       
       var moodInput = temotion;
-      console.log(temotion);
-      console.log(moodInput);
+  
       var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + moodInput + "&api_key=H8YEjrprBP114UoKPFK4mv1xKW8sKR6o";
 
       // AJAX call to giphy API
