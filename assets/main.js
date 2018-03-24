@@ -58,6 +58,9 @@ $(document).ready(function() {
     //});
 
     //Form submit funtion for first modal
+    
+      
+     
 
     //$("form").submit(function (event) {
     // event.preventDefault();
@@ -69,7 +72,7 @@ $(document).ready(function() {
       "https://api.giphy.com/v1/gifs/search?q=" +
       moodInput +
       "&api_key=H8YEjrprBP114UoKPFK4mv1xKW8sKR6o";
-
+    // generate number to select random gif from array
     randGif = Math.floor(Math.random() * 25);
 
     // AJAX call to giphy API
@@ -78,6 +81,7 @@ $(document).ready(function() {
       method: "GET"
     }).then(function(response) {
       var results = response.data;
+      console.log(results);
       for (var i = 0; i < 1; i++) {
         var obj = results[randGif];
         var gifDiv = $("<div class='gif-results'>");
