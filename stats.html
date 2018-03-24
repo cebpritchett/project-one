@@ -69,7 +69,9 @@
                 </li>
             </ul>
     </header>
-    <h2 id="dataTitle">Mood Data</h2>
+
+    <h1 id="dataTitle">Mood Data</h1>
+
     <!--Line Graph-->
         <div id="myDivLine">
             <!-- Plotly chart will be drawn inside this DIV -->
@@ -84,6 +86,7 @@
             
             }];
 
+
     var database = firebase.database(); 
     database.ref().limitToFirst(8).on("child_added", function (childSnapshot) {
 
@@ -91,6 +94,7 @@
         var tdate = childSnapshot.val().date;
         var tstat = childSnapshot.val().rating;
         //add data from firebase to the table
+
 
         trace1[0].x.push(tdate);
         trace1[0].y.push(tstat);
