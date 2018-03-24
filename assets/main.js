@@ -57,7 +57,7 @@ $(document).ready(function () {
   //Form submit funtion for first modal
 
 //$("form").submit(function (event) {
-     // event.preventDefault();
+     //event.preventDefault();
       
       var moodInput = temotion;
       console.log(temotion);
