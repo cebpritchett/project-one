@@ -14,20 +14,11 @@ firebase.initializeApp(config);
             //var horoscopeURL = "http://horoscope-api.herokuapp.com/horoscope/today/" + horoscopeSign;
             //var horoscopeSign = "";
 $(document).ready(function () {
-  //$("#modal1").show();
-  //$('#calendar').hide();
-  //$('#quote').hide();
-  //$("#todo").hide();
-  //$("#gifs-appear-here").hide();
+  
   //on click hide the message and the
+  
   $("#modalsubmit").click(function () {
-      //$("#modal1").hide();
-      //$('#calendar').show();
-      //$('#quote').show();
-      //$("#todo").show();
-    //$("#gifs-appear-here").show();
-
-
+      
     //set variables for user input
     var date = moment().format("L");
     var emotion = $("#emotion-input")
@@ -89,6 +80,7 @@ $(document).ready(function () {
           }
         });
       });
+
 
   });
 });
