@@ -552,8 +552,8 @@ function computeGreatestUnit(start, end) {
     var i;
     var unit;
     var val;
-    for (i = 0; i < unitsDesc.length; i++) {
-        unit = unitsDesc[i];
+    for (i = 0; i < exports.unitsDesc.length; i++) {
+        unit = exports.unitsDesc[i];
         val = computeRangeAs(unit, start, end);
         if (val >= 1 && isInt(val)) {
             break;
@@ -694,7 +694,7 @@ function mergeProps(propObjs, complexProps) {
                 if (typeof val === 'object') {
                     complexObjs.unshift(val);
                 }
-                else if (val !== undefined) {
+                else if (val !==   {
                     dest[name] = val; // if there were no objects, this value will be used
                     break;
                 }
@@ -793,7 +793,7 @@ function firstDefined() {
         args[_i] = arguments[_i];
     }
     for (var i = 0; i < args.length; i++) {
-        if (args[i] !== undefined) {
+        if (args[i] !== ) {
             return args[i];
         }
     }
@@ -1256,11 +1256,7 @@ var $ = __webpack_require__(3);
 var util_1 = __webpack_require__(4);
 var ambigDateOfMonthRegex = /^\s*\d{4}-\d\d$/;
 var ambigTimeOrZoneRegex = /^\s*\d{4}-(?:(\d\d-\d\d)|(W\d\d$)|(W\d\d-\d)|(\d\d\d))((T| )(\d\d(:\d\d(:\d\d(\.\d+)?)?)?)?)?$/;
-var  newMomentProto = moment.function(); 
-
-
-
-// where we will attach our new methods
+var newMomentProto = moment.fn; // where we will attach our new methods
 exports.newMomentProto = newMomentProto;
 var oldMomentProto = $.extend({}, newMomentProto); // copy of original moment methods
 exports.oldMomentProto = oldMomentProto;
@@ -1315,7 +1311,7 @@ function makeMoment(args, parseAsUTC, parseZone) {
     var isAmbigZone;
     var ambigMatch;
     var mom;
-    if (moment.isMoment(input) || util_1.isNativeDate(input) || input === undefined) {
+    if (moment.isMoment(input) || util_1.isNativeDate(input) || input === ) {
         mom = moment.apply(null, args);
     }
     else {
@@ -2319,13 +2315,13 @@ EmitterMixin_1.default.mixInto(GlobalEmitter);
 Object.defineProperty(exports, "__esModule", { value: true });
 var exportHooks = __webpack_require__(16);
 exports.viewHash = {};
-exportHooks.views = viewHash;
+exportHooks.views = exports.viewHash;
 function defineView(viewName, viewConfig) {
-    viewHash[viewName] = viewConfig;
+    exports.viewHash[viewName] = viewConfig;
 }
 exports.defineView = defineView;
 function getViewConfig(viewName) {
-    return viewHash[viewName];
+    return exports.viewHash[viewName];
 }
 exports.getViewConfig = getViewConfig;
 
@@ -2511,7 +2507,7 @@ var exportHooks = __webpack_require__(16);
 var options_1 = __webpack_require__(32);
 var util_1 = __webpack_require__(4);
 exports.localeOptionHash = {};
-exportHooks.locales = localeOptionHash;
+exportHooks.locales = exports.localeOptionHash;
 // NOTE: can't guarantee any of these computations will run because not every locale has datepicker
 // configs, so make sure there are English fallbacks for these in the defaults file.
 var dpComputableOptions = {
@@ -2612,7 +2608,7 @@ exports.populateInstanceComputableOptions = populateInstanceComputableOptions;
 // Will set this as the default locales for datepicker.
 function datepickerLocale(localeCode, dpLocaleCode, dpOptions) {
     // get the FullCalendar internal option hash for this locale. create if necessary
-    var fcOptions = localeOptionHash[localeCode] || (localeOptionHash[localeCode] = {});
+    var fcOptions = exports.localeOptionHash[localeCode] || (exports.localeOptionHash[localeCode] = {});
     // transfer some simple options from datepicker to fc
     fcOptions.isRTL = dpOptions.isRTL;
     fcOptions.weekNumberTitle = dpOptions.weekHeader;
@@ -2642,10 +2638,10 @@ function locale(localeCode, newFcOptions) {
     var fcOptions;
     var momOptions;
     // get the FullCalendar internal option hash for this locale. create if necessary
-    fcOptions = localeOptionHash[localeCode] || (localeOptionHash[localeCode] = {});
+    fcOptions = exports.localeOptionHash[localeCode] || (exports.localeOptionHash[localeCode] = {});
     // provided new options for this locales? merge them in
     if (newFcOptions) {
-        fcOptions = localeOptionHash[localeCode] = options_1.mergeOptions([fcOptions, newFcOptions]);
+        fcOptions = exports.localeOptionHash[localeCode] = options_1.mergeOptions([fcOptions, newFcOptions]);
     }
     // compute locale options that weren't defined.
     // always do this. newFcOptions can be undefined when initializing from i18n file,
@@ -3635,7 +3631,7 @@ var View = /** @class */ (function (_super) {
     // -----------------------------------------------------------------------------------------------------------------
     View.prototype.setDate = function (date) {
         var currentDateProfile = this.get('dateProfile');
-        var newDateProfile = this.dateProfileGenerator.build(date, undefined, true); // forceToValid=true
+        var newDateProfile = this.dateProfileGenerator.build(date, true); // forceToValid=true
         if (!currentDateProfile ||
             !currentDateProfile.activeUnzonedRange.equals(newDateProfile.activeUnzonedRange)) {
             this.set('dateProfile', newDateProfile);
@@ -4964,7 +4960,7 @@ var Model = /** @class */ (function (_super) {
         var newProps;
         if (typeof name === 'string') {
             newProps = {};
-            newProps[name] = val === undefined ? null : val;
+            newProps[name] = val ===  ? null : val;
         }
         else {
             newProps = name;
@@ -4976,7 +4972,7 @@ var Model = /** @class */ (function (_super) {
         var changeset = {}; // will have undefined's to signal unsets
         var name;
         for (name in oldProps) {
-            changeset[name] = undefined;
+            changeset[name] = ;
         }
         for (name in newProps) {
             changeset[name] = newProps[name];
@@ -4994,7 +4990,7 @@ var Model = /** @class */ (function (_super) {
             names = name;
         }
         for (i = 0; i < names.length; i++) {
-            newProps[names[i]] = undefined;
+            newProps[names[i]] = ;
         }
         this.setProps(newProps);
     };
@@ -5023,7 +5019,7 @@ var Model = /** @class */ (function (_super) {
             }
             for (name in changedProps) {
                 val = changedProps[name];
-                if (val === undefined) {
+                if (val === ) {
                     delete this._props[name];
                 }
                 else {
@@ -5082,16 +5078,16 @@ var Model = /** @class */ (function (_super) {
             }
         };
         var onDepChange = function (depName, val, isOptional) {
-            if (val === undefined) {
+            if (val === ) {
                 // required dependency that was previously set?
-                if (!isOptional && values[depName] !== undefined) {
+                if (!isOptional && values[depName] !==  {
                     satisfyCnt--;
                 }
                 delete values[depName];
             }
             else {
                 // required dependency that was previously unset?
-                if (!isOptional && values[depName] === undefined) {
+                if (!isOptional && values[depName] === ) {
                     satisfyCnt++;
                 }
                 values[depName] = val;
@@ -7471,7 +7467,7 @@ var BasicView = /** @class */ (function (_super) {
         return { top: this.scroller.getScrollTop() };
     };
     BasicView.prototype.applyDateScroll = function (scroll) {
-        if (scroll.top !== undefined) {
+        if (scroll.top !== ) {
             this.scroller.setScrollTop(scroll.top);
         }
     };
@@ -9366,7 +9362,7 @@ var Calendar = /** @class */ (function () {
     Calendar.prototype.option = function (name, value) {
         var newOptionHash;
         if (typeof name === 'string') {
-            if (value === undefined) {
+            if (value === ) {
                 return this.optionsManager.get(name);
             }
             else {
@@ -11500,7 +11496,7 @@ var AgendaView = /** @class */ (function (_super) {
         return { top: this.scroller.getScrollTop() };
     };
     AgendaView.prototype.applyDateScroll = function (scroll) {
-        if (scroll.top !== undefined) {
+        if (scroll.top !== ) {
             this.scroller.setScrollTop(scroll.top);
         }
     };
@@ -13884,7 +13880,7 @@ var TimeGridEventRenderer = /** @class */ (function (_super) {
     TimeGridEventRenderer.prototype.computeFgSegForwardBack = function (seg, seriesBackwardPressure, seriesBackwardCoord) {
         var forwardSegs = seg.forwardSegs;
         var i;
-        if (seg.forwardCoord === undefined) {
+        if (seg.forwardCoord === ) {
             if (!forwardSegs.length) {
                 // if there are no forward segments, this segment should butt up against the edge
                 seg.forwardCoord = 1;
@@ -14014,7 +14010,7 @@ function computeSlotSegPressures(seg) {
     var forwardPressure = 0;
     var i;
     var forwardSeg;
-    if (seg.forwardPressure === undefined) {
+    if (seg.forwardPressure === ) {
         for (i = 0; i < forwardSegs.length; i++) {
             forwardSeg = forwardSegs[i];
             // figure out the child's maximum forward path
@@ -14219,10 +14215,10 @@ var Popover = /** @class */ (function () {
         var left; //
         // compute top and left
         top = options.top || 0;
-        if (options.left !== undefined) {
+        if (options.left !== ) {
             left = options.left;
         }
-        else if (options.right !== undefined) {
+        else if (options.right !== ) {
             left = options.right - width; // derive the left value from the right value
         }
         else {

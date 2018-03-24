@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <!--Meta Tags-->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
 
     <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-
+  
     <!--Linking Local CSS-->
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css" />
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
 
+        <link rel="stylesheet" type="text/css" media="screen" href='assets/reset.css'></link>
+        <link rel="stylesheet" type="text/css" href='assets/style.css'></link>  
+        <link href='assets/calendar/lib/fullcalendar.min.css' rel='stylesheet' media='print'></link>
+        <link href='assets/calendar/lib/fullcalendar.print.min.css' rel='stylesheet' media='print'><link>
+
+    <!--Link for calendar css-->
+   <link rel='stylesheet' type='text/css' href='assets/calendar/lib/fullcalendar.css' />
+ 
+   <!-- Jquery and Javascript -->
+   <script src='assets/calendar/lib/moment.min.js'></script>
+   <script src='assets/calendar/lib/jquery.min.js'></script>
+   <script src='assets/calendar/lib/fullcalendar.min.js'></script>
+   <script type='text/javascript' src='assets/jquery.js'></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type='text/javascript' src='assets/fullcalendar.js'></script>
+   
+    <!--Link to googlefonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+   
     <!-- Plotly.js -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- Numeric JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
 
     <!--Page Title-->
-    <title>MEMOod Stats</title>
+    <title>Me Mood Stats</title>
 
 </head>
 
 <body>
+    <!--Jumbotron Header-->
     <header>
-        <!--Jumbotron Header-->
         <div class="jumbotron">
-            <h1 class="display-4">MEmood</h1>
+            <h1 class="display-4">Me Mood</h1>
             <br>
-            <p class="lead">STATS PAGE</p>
+            <p class="lead">STATS</p>
             <br>
             <br>
             <!--Nav Bar -->
@@ -51,149 +69,63 @@
                 </li>
             </ul>
     </header>
-    <!--Pie Chart-->
-    <div id="myDivPie">
+
+    <h1 id="dataTitle">Mood Data</h1>
+
+    <!--Line Graph-->
+        <div id="myDivLine">
             <!-- Plotly chart will be drawn inside this DIV -->
-    </div>
+        </div>
+        <footer>
+            <p id="foottext">Copyright © 2018 MeMood</p>
+        </footer>
+        <script src="assets/main.js"></script>
         <script>
-        var allLabels = ['1st', '2nd', '3rd', '4th', '5th'];
 
-            var allValues = [
-                [38, 27, 18, 10, 7],
-                [28, 26, 21, 15, 10],
-                [38, 19, 16, 14, 13],
-                [31, 24, 19, 18, 8]
-            ];
-
-            var ultimateColors = [
-                ['rgb(56, 75, 126)', 'rgb(18, 36, 37)', 'rgb(34, 53, 101)', 'rgb(36, 55, 57)', 'rgb(6, 4, 4)'],
-                ['rgb(177, 127, 38)', 'rgb(205, 152, 36)', 'rgb(99, 79, 37)', 'rgb(129, 180, 179)', 'rgb(124, 103, 37)'],
-                ['rgb(33, 75, 99)', 'rgb(79, 129, 102)', 'rgb(151, 179, 100)', 'rgb(175, 49, 35)', 'rgb(36, 73, 147)'],
-                ['rgb(146, 123, 21)', 'rgb(177, 180, 34)', 'rgb(206, 206, 40)', 'rgb(175, 51, 21)', 'rgb(35, 36, 21)']
-            ];
-
-            var data = [{
-                values: allValues[0],
-                labels: allLabels,
-                type: 'pie',
-                name: 'Starry Night',
-                marker: {
-                    colors: ultimateColors[0]
-                },
-                domain: {
-                    x: [0, .48],
-                    y: [0, .49]
-                },
-                hoverinfo: 'label+percent+name',
-                textinfo: 'none'
-            }, {
-                values: allValues[1],
-                labels: allLabels,
-                type: 'pie',
-                name: 'Sunflowers',
-                marker: {
-                    colors: ultimateColors[1]
-                },
-                domain: {
-                    x: [0.52, 1],
-                    y: [0, .49]
-                },
-                hoverinfo: 'label+percent+name',
-                textinfo: 'none'
-            }, {
-                values: allValues[2],
-                labels: allLabels,
-                type: 'pie',
-                name: 'Irises',
-                marker: {
-                    colors: ultimateColors[2]
-                },
-                domain: {
-                    x: [0, .48],
-                    y: [.51, 1]
-                },
-                hoverinfo: 'label+percent+name',
-                textinfo: 'none'
-            }, {
-                values: allValues[3],
-                labels: allLabels,
-                type: 'pie',
-                name: 'The Night Cafe',
-                marker: {
-                    colors: ultimateColors[3]
-                },
-                domain: {
-                    x: [0.52, 1],
-                    y: [0.52, 1]
-                },
-                hoverinfo: 'label+percent+name',
-                textinfo: 'none'
+            var trace1 = [{ 
+                x: [], //"3/18/18", "3/19/18", "3/20/20", "3/21/18", "3/22/18", "3/23/18", "3/24/18"]
+                y: [], //[4, 3, 2, 1 ,1 ,4, 5]
+                type:'scatter'
+            
             }];
 
-            var layout = {
-                height: 400,
-                width: 500
-            };
 
-            Plotly.newPlot("myDivPie", data, layout);
+    var database = firebase.database(); 
+    database.ref().limitToFirst(8).on("child_added", function (childSnapshot) {
+
+        //store snapshot data into variable
+        var tdate = childSnapshot.val().date;
+        var tstat = childSnapshot.val().rating;
+        //add data from firebase to the table
+
+
+        trace1[0].x.push(tdate);
+        trace1[0].y.push(tstat);
+        
+        Plotly.newPlot('myDivLine', trace1); 
+    });
+
         </script>
-
-    <!--Bubble Chart-->
-    <div id="myDiv" style="width: 480px; height: 400px;">
-        <!-- Plotly chart will be drawn inside this DIV -->
-    </div>
-        <script>
-                var trace1 = {
-                x: [1, 2, 3, 4],
-                y: [10, 11, 12, 13],
-                mode: 'markers',
-                marker: {
-                    size: [40, 60, 80, 100]
-                }
-                };
-
-                var data = [trace1];
-
-                var layout = {
-                        height: 400,
-                        width: 500
-                };
-
-                Plotly.newPlot('myDiv', data, layout);
-        </script>
-
-    <!--Modal-->    
-    <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 
     <!-- Optional JavaScript -->
-    <script src="assets/main.js"></script>
+    <script src="assets/entries.js"></script>
+ 
+    <script src='assets/fullcalendar.js'></script>
+    <script src='assets/calendar/lib/moment.js'></script>
+  <script src='assets/calendar/lib/scheduler.js'></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>   
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   
+          <!-- Optional JavaScript -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.css">
+           
 </body>
-
 </html>
