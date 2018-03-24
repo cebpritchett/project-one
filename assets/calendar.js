@@ -78,15 +78,3 @@ $(function() {
       
           });
       });
-
-
-      select: function (start, end, jsEvent, view) {
-        var abc = prompt('Enter Title');
-        var allDay = !start.hasTime && !end.hasTime;
-        var newEvent = new Object();
-        newEvent.title = abc;
-        newEvent.start = moment(start).format();
-        newEvent.allDay = false;
-        $('#calendar').fullCalendar('renderEvent', newEvent);
-
-    }
