@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $.ajax({
-        url: 'https://api.adviceslip.com/advice',
+        url: 'http://api.adviceslip.com/advice',
         dataType: 'json',
         success: function (response) {
             console.log('success', response);
