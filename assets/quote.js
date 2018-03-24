@@ -18,6 +18,7 @@ $(document).ready(function(){
     getNewQuote();
 
 });
+<<<<<<< HEAD
         
 
 
@@ -30,3 +31,5 @@ $(document).ready(function(){
 
     
    
+=======
+>>>>>>> 1d638d8d184b57dc22255d5674564fa4d443140e
