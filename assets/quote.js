@@ -6,11 +6,6 @@ $(document).ready(function(){
             console.log('success', response);
             advice = response.slip.advice;
             $('#quote').text('"'+advice+'"');
-            if (response.author) {
-                $('#author').text('- ' + response.author);
-            } else {
-                $('#author').text('- unkown');
-            }
         }
     });
 });
