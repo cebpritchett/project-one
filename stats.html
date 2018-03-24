@@ -69,30 +69,39 @@
                 </li>
             </ul>
     </header>
+
     <h1 id="dataTitle">Mood Data</h1>
+
     <!--Line Graph-->
         <div id="myDivLine">
             <!-- Plotly chart will be drawn inside this DIV -->
         </div>
         <script src="assets/main.js"></script>
         <script>
+
             var trace1 = [{ 
                 x: [], //"3/18/18", "3/19/18", "3/20/20", "3/21/18", "3/22/18", "3/23/18", "3/24/18"]
                 y: [], //[4, 3, 2, 1 ,1 ,4, 5]
                 type:'scatter'
             
             }];
+
+
     var database = firebase.database(); 
     database.ref().limitToFirst(8).on("child_added", function (childSnapshot) {
+
         //store snapshot data into variable
         var tdate = childSnapshot.val().date;
         var tstat = childSnapshot.val().rating;
         //add data from firebase to the table
+
+
         trace1[0].x.push(tdate);
         trace1[0].y.push(tstat);
         
         Plotly.newPlot('myDivLine', trace1); 
     });
+
         </script>
 
 
