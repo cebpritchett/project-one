@@ -23,9 +23,8 @@ $(function() {
                           start: date,
                           allDay: true,
                         });
-                        alert('Great. Now, update your database...');
-                      } else {
-                        alert('Invalid date.');        
+                        
+                      }        
                       }
                     }
                   }, 
