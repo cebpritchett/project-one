@@ -1,11 +1,11 @@
 $(document).ready(function(){
     $.ajax({
-        url: 'http://api.adviceslip.com/advice',
+        url: 'https://talaikis.com/api/quotes/random/',
         dataType: 'json',
         success: function (response) {
             console.log('success', response);
-            advice = response.slip.advice;
-            $('#quote').text('"'+advice+'"');
+            quote = response.quote;
+            $('#quote').text('"'+quote+'"');
             if (response.author) {
                 $('#author').text('- ' + response.author);
             } else {
@@ -14,5 +14,3 @@ $(document).ready(function(){
         }
     });
 });
-    
-   
