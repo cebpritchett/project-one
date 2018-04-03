@@ -4,10 +4,10 @@ $(function() {
     themeSystem: 'bootstrap4',
       defaultView: 'month',
       header: {
-        left: 'prev,next today',
+        left: 'addEventButton,prev, next today',
         center: 'title',
         right: 'month,agendaWeek,agendaDay,listYear',
-        center: 'addEventButton',
+    
                  },
                  eventLimit: true, // allow "more" link when too many events
                  events: 'https://fullcalendar.io/demo-events.json',          
@@ -26,24 +26,16 @@ $(function() {
                         alert('Great. Now, update your database...');
                       } else {
                         alert('Invalid date.');        
-        
                       }
                     }
-    
                   }, 
-
             // US Holidays 
+        
                   displayEventTime: false,
                   googleCalendarApiKey: "AIzaSyB9J2ghets4yF_E6shVw79vOQvfTU4OE00", 
-                  events: 'en.usa#holiday@group.v.calendar.google.com',
-                  eventClick: function(events) {
+                  events1: 'https://en.usa#holiday@group.v.calendar.google.com',
+                  eventClick: function(events1) {
                                  // opens events in a popup window
-                    window.open(events.url, '_blank', 'width=700,height=600')
-                    return false;
-                      },
-                  
-                }
-              })
-            })     
-
-          
+                    window.open(events1.url, '_blank', 'width=700,height=600')
+                    return false; }} })
+                  })

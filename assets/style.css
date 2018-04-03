@@ -8,7 +8,7 @@
 */
 
 body {
-    background: url("images/background.jpeg")no-repeat center center fixed;
+    background: url("http://78.media.tumblr.com/ecd13ce0a4dbcb0678ca9bb905244ee2/tumblr_ndrc0rCsVL1saq3w2o1_500.gif")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -231,7 +231,6 @@ label {
     border: 2px solid #1D1941;
     margin-bottom: 2%;
 }
-<<<<<<< HEAD
 
 #stat-title{
     text-align: center;
@@ -343,4 +342,3 @@ footer {
     padding-top: 1%;
     color: #F8E3BC;
 }
->>>>>>> 35e1c34b7660012c2cc7a819b0aa721eed68f27d
